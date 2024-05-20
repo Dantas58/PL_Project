@@ -1,0 +1,2442 @@
+Created by PLY version 3.11 (http://www.dabeaz.com/ply)
+
+Grammar
+
+Rule 0     S' -> inicio
+Rule 1     inicio -> Comandos
+Rule 2     Comandos -> Comando Comandos
+Rule 3     Comandos -> Comando
+Rule 4     Comando -> Valores
+Rule 5     Comando -> Operadores
+Rule 6     Comando -> Declaracao
+Rule 7     Comando -> Print
+Rule 8     Comando -> Operacao
+Rule 9     Comando -> Condicional
+Rule 10    Comando -> Ciclo
+Rule 11    Comando -> DEFINED_WORD
+Rule 12    Condicional -> IF Comandos ELSE Comandos THEN
+Rule 13    Condicional -> IF Comandos ELSE THEN
+Rule 14    Condicional -> IF Comandos THEN
+Rule 15    Condicional -> IF THEN
+Rule 16    Ciclo -> DO Comandos LOOP
+Rule 17    Operacao -> KEY
+Rule 18    Operacao -> DUP
+Rule 19    Operacao -> 2DUP
+Rule 20    Operacao -> SWAP
+Rule 21    Operacao -> DROP
+Rule 22    Print -> STRING
+Rule 23    Print -> EMIT
+Rule 24    Print -> DOT
+Rule 25    Print -> CHAR
+Rule 26    Print -> SPACE
+Rule 27    Print -> SPACES
+Rule 28    Print -> CR
+Rule 29    Valores -> INT
+Rule 30    Declaracao -> DeclaracaoF
+Rule 31    Declaracao -> DeclaracaoV
+Rule 32    DeclaracaoF -> NAME Comandos SEMICOLON
+Rule 33    DeclaracaoV -> VARIABLE
+Rule 34    DeclaracaoV -> EXCLAMATION
+Rule 35    DeclaracaoV -> AT
+Rule 36    Operadores -> PLUS
+Rule 37    Operadores -> MINUS
+Rule 38    Operadores -> TIMES
+Rule 39    Operadores -> DIVIDE
+Rule 40    Operadores -> MOD
+Rule 41    Operadores -> SUPEQ
+Rule 42    Operadores -> INFEQ
+Rule 43    Operadores -> INFERIOR
+Rule 44    Operadores -> SUPERIOR
+Rule 45    Operadores -> EQUALS
+
+Terminals, with rules where they appear
+
+2DUP                 : 19
+AT                   : 35
+CHAR                 : 25
+CR                   : 28
+DEFINED_WORD         : 11
+DIVIDE               : 39
+DO                   : 16
+DOT                  : 24
+DROP                 : 21
+DUP                  : 18
+ELSE                 : 12 13
+EMIT                 : 23
+EQUALS               : 45
+EXCLAMATION          : 34
+IF                   : 12 13 14 15
+INFEQ                : 42
+INFERIOR             : 43
+INT                  : 29
+KEY                  : 17
+LOOP                 : 16
+MINUS                : 37
+MOD                  : 40
+NAME                 : 32
+PLUS                 : 36
+SEMICOLON            : 32
+SPACE                : 26
+SPACES               : 27
+STRING               : 22
+SUPEQ                : 41
+SUPERIOR             : 44
+SWAP                 : 20
+THEN                 : 12 13 14 15
+TIMES                : 38
+VARIABLE             : 33
+error                : 
+
+Nonterminals, with rules where they appear
+
+Ciclo                : 10
+Comando              : 2 3
+Comandos             : 1 2 12 12 13 14 16 32
+Condicional          : 9
+Declaracao           : 6
+DeclaracaoF          : 30
+DeclaracaoV          : 31
+Operacao             : 8
+Operadores           : 5
+Print                : 7
+Valores              : 4
+inicio               : 0
+
+Parsing method: LALR
+
+state 0
+
+    (0) S' -> . inicio
+    (1) inicio -> . Comandos
+    (2) Comandos -> . Comando Comandos
+    (3) Comandos -> . Comando
+    (4) Comando -> . Valores
+    (5) Comando -> . Operadores
+    (6) Comando -> . Declaracao
+    (7) Comando -> . Print
+    (8) Comando -> . Operacao
+    (9) Comando -> . Condicional
+    (10) Comando -> . Ciclo
+    (11) Comando -> . DEFINED_WORD
+    (29) Valores -> . INT
+    (36) Operadores -> . PLUS
+    (37) Operadores -> . MINUS
+    (38) Operadores -> . TIMES
+    (39) Operadores -> . DIVIDE
+    (40) Operadores -> . MOD
+    (41) Operadores -> . SUPEQ
+    (42) Operadores -> . INFEQ
+    (43) Operadores -> . INFERIOR
+    (44) Operadores -> . SUPERIOR
+    (45) Operadores -> . EQUALS
+    (30) Declaracao -> . DeclaracaoF
+    (31) Declaracao -> . DeclaracaoV
+    (22) Print -> . STRING
+    (23) Print -> . EMIT
+    (24) Print -> . DOT
+    (25) Print -> . CHAR
+    (26) Print -> . SPACE
+    (27) Print -> . SPACES
+    (28) Print -> . CR
+    (17) Operacao -> . KEY
+    (18) Operacao -> . DUP
+    (19) Operacao -> . 2DUP
+    (20) Operacao -> . SWAP
+    (21) Operacao -> . DROP
+    (12) Condicional -> . IF Comandos ELSE Comandos THEN
+    (13) Condicional -> . IF Comandos ELSE THEN
+    (14) Condicional -> . IF Comandos THEN
+    (15) Condicional -> . IF THEN
+    (16) Ciclo -> . DO Comandos LOOP
+    (32) DeclaracaoF -> . NAME Comandos SEMICOLON
+    (33) DeclaracaoV -> . VARIABLE
+    (34) DeclaracaoV -> . EXCLAMATION
+    (35) DeclaracaoV -> . AT
+
+    DEFINED_WORD    shift and go to state 11
+    INT             shift and go to state 12
+    PLUS            shift and go to state 13
+    MINUS           shift and go to state 14
+    TIMES           shift and go to state 15
+    DIVIDE          shift and go to state 16
+    MOD             shift and go to state 17
+    SUPEQ           shift and go to state 18
+    INFEQ           shift and go to state 19
+    INFERIOR        shift and go to state 20
+    SUPERIOR        shift and go to state 21
+    EQUALS          shift and go to state 22
+    STRING          shift and go to state 25
+    EMIT            shift and go to state 26
+    DOT             shift and go to state 27
+    CHAR            shift and go to state 28
+    SPACE           shift and go to state 29
+    SPACES          shift and go to state 30
+    CR              shift and go to state 31
+    KEY             shift and go to state 32
+    DUP             shift and go to state 33
+    2DUP            shift and go to state 34
+    SWAP            shift and go to state 35
+    DROP            shift and go to state 36
+    IF              shift and go to state 37
+    DO              shift and go to state 38
+    NAME            shift and go to state 39
+    VARIABLE        shift and go to state 40
+    EXCLAMATION     shift and go to state 41
+    AT              shift and go to state 42
+
+    inicio                         shift and go to state 1
+    Comandos                       shift and go to state 2
+    Comando                        shift and go to state 3
+    Valores                        shift and go to state 4
+    Operadores                     shift and go to state 5
+    Declaracao                     shift and go to state 6
+    Print                          shift and go to state 7
+    Operacao                       shift and go to state 8
+    Condicional                    shift and go to state 9
+    Ciclo                          shift and go to state 10
+    DeclaracaoF                    shift and go to state 23
+    DeclaracaoV                    shift and go to state 24
+
+state 1
+
+    (0) S' -> inicio .
+
+
+
+state 2
+
+    (1) inicio -> Comandos .
+
+    $end            reduce using rule 1 (inicio -> Comandos .)
+
+
+state 3
+
+    (2) Comandos -> Comando . Comandos
+    (3) Comandos -> Comando .
+    (2) Comandos -> . Comando Comandos
+    (3) Comandos -> . Comando
+    (4) Comando -> . Valores
+    (5) Comando -> . Operadores
+    (6) Comando -> . Declaracao
+    (7) Comando -> . Print
+    (8) Comando -> . Operacao
+    (9) Comando -> . Condicional
+    (10) Comando -> . Ciclo
+    (11) Comando -> . DEFINED_WORD
+    (29) Valores -> . INT
+    (36) Operadores -> . PLUS
+    (37) Operadores -> . MINUS
+    (38) Operadores -> . TIMES
+    (39) Operadores -> . DIVIDE
+    (40) Operadores -> . MOD
+    (41) Operadores -> . SUPEQ
+    (42) Operadores -> . INFEQ
+    (43) Operadores -> . INFERIOR
+    (44) Operadores -> . SUPERIOR
+    (45) Operadores -> . EQUALS
+    (30) Declaracao -> . DeclaracaoF
+    (31) Declaracao -> . DeclaracaoV
+    (22) Print -> . STRING
+    (23) Print -> . EMIT
+    (24) Print -> . DOT
+    (25) Print -> . CHAR
+    (26) Print -> . SPACE
+    (27) Print -> . SPACES
+    (28) Print -> . CR
+    (17) Operacao -> . KEY
+    (18) Operacao -> . DUP
+    (19) Operacao -> . 2DUP
+    (20) Operacao -> . SWAP
+    (21) Operacao -> . DROP
+    (12) Condicional -> . IF Comandos ELSE Comandos THEN
+    (13) Condicional -> . IF Comandos ELSE THEN
+    (14) Condicional -> . IF Comandos THEN
+    (15) Condicional -> . IF THEN
+    (16) Ciclo -> . DO Comandos LOOP
+    (32) DeclaracaoF -> . NAME Comandos SEMICOLON
+    (33) DeclaracaoV -> . VARIABLE
+    (34) DeclaracaoV -> . EXCLAMATION
+    (35) DeclaracaoV -> . AT
+
+    $end            reduce using rule 3 (Comandos -> Comando .)
+    ELSE            reduce using rule 3 (Comandos -> Comando .)
+    THEN            reduce using rule 3 (Comandos -> Comando .)
+    LOOP            reduce using rule 3 (Comandos -> Comando .)
+    SEMICOLON       reduce using rule 3 (Comandos -> Comando .)
+    DEFINED_WORD    shift and go to state 11
+    INT             shift and go to state 12
+    PLUS            shift and go to state 13
+    MINUS           shift and go to state 14
+    TIMES           shift and go to state 15
+    DIVIDE          shift and go to state 16
+    MOD             shift and go to state 17
+    SUPEQ           shift and go to state 18
+    INFEQ           shift and go to state 19
+    INFERIOR        shift and go to state 20
+    SUPERIOR        shift and go to state 21
+    EQUALS          shift and go to state 22
+    STRING          shift and go to state 25
+    EMIT            shift and go to state 26
+    DOT             shift and go to state 27
+    CHAR            shift and go to state 28
+    SPACE           shift and go to state 29
+    SPACES          shift and go to state 30
+    CR              shift and go to state 31
+    KEY             shift and go to state 32
+    DUP             shift and go to state 33
+    2DUP            shift and go to state 34
+    SWAP            shift and go to state 35
+    DROP            shift and go to state 36
+    IF              shift and go to state 37
+    DO              shift and go to state 38
+    NAME            shift and go to state 39
+    VARIABLE        shift and go to state 40
+    EXCLAMATION     shift and go to state 41
+    AT              shift and go to state 42
+
+    Comando                        shift and go to state 3
+    Comandos                       shift and go to state 43
+    Valores                        shift and go to state 4
+    Operadores                     shift and go to state 5
+    Declaracao                     shift and go to state 6
+    Print                          shift and go to state 7
+    Operacao                       shift and go to state 8
+    Condicional                    shift and go to state 9
+    Ciclo                          shift and go to state 10
+    DeclaracaoF                    shift and go to state 23
+    DeclaracaoV                    shift and go to state 24
+
+state 4
+
+    (4) Comando -> Valores .
+
+    DEFINED_WORD    reduce using rule 4 (Comando -> Valores .)
+    INT             reduce using rule 4 (Comando -> Valores .)
+    PLUS            reduce using rule 4 (Comando -> Valores .)
+    MINUS           reduce using rule 4 (Comando -> Valores .)
+    TIMES           reduce using rule 4 (Comando -> Valores .)
+    DIVIDE          reduce using rule 4 (Comando -> Valores .)
+    MOD             reduce using rule 4 (Comando -> Valores .)
+    SUPEQ           reduce using rule 4 (Comando -> Valores .)
+    INFEQ           reduce using rule 4 (Comando -> Valores .)
+    INFERIOR        reduce using rule 4 (Comando -> Valores .)
+    SUPERIOR        reduce using rule 4 (Comando -> Valores .)
+    EQUALS          reduce using rule 4 (Comando -> Valores .)
+    STRING          reduce using rule 4 (Comando -> Valores .)
+    EMIT            reduce using rule 4 (Comando -> Valores .)
+    DOT             reduce using rule 4 (Comando -> Valores .)
+    CHAR            reduce using rule 4 (Comando -> Valores .)
+    SPACE           reduce using rule 4 (Comando -> Valores .)
+    SPACES          reduce using rule 4 (Comando -> Valores .)
+    CR              reduce using rule 4 (Comando -> Valores .)
+    KEY             reduce using rule 4 (Comando -> Valores .)
+    DUP             reduce using rule 4 (Comando -> Valores .)
+    2DUP            reduce using rule 4 (Comando -> Valores .)
+    SWAP            reduce using rule 4 (Comando -> Valores .)
+    DROP            reduce using rule 4 (Comando -> Valores .)
+    IF              reduce using rule 4 (Comando -> Valores .)
+    DO              reduce using rule 4 (Comando -> Valores .)
+    NAME            reduce using rule 4 (Comando -> Valores .)
+    VARIABLE        reduce using rule 4 (Comando -> Valores .)
+    EXCLAMATION     reduce using rule 4 (Comando -> Valores .)
+    AT              reduce using rule 4 (Comando -> Valores .)
+    $end            reduce using rule 4 (Comando -> Valores .)
+    ELSE            reduce using rule 4 (Comando -> Valores .)
+    THEN            reduce using rule 4 (Comando -> Valores .)
+    LOOP            reduce using rule 4 (Comando -> Valores .)
+    SEMICOLON       reduce using rule 4 (Comando -> Valores .)
+
+
+state 5
+
+    (5) Comando -> Operadores .
+
+    DEFINED_WORD    reduce using rule 5 (Comando -> Operadores .)
+    INT             reduce using rule 5 (Comando -> Operadores .)
+    PLUS            reduce using rule 5 (Comando -> Operadores .)
+    MINUS           reduce using rule 5 (Comando -> Operadores .)
+    TIMES           reduce using rule 5 (Comando -> Operadores .)
+    DIVIDE          reduce using rule 5 (Comando -> Operadores .)
+    MOD             reduce using rule 5 (Comando -> Operadores .)
+    SUPEQ           reduce using rule 5 (Comando -> Operadores .)
+    INFEQ           reduce using rule 5 (Comando -> Operadores .)
+    INFERIOR        reduce using rule 5 (Comando -> Operadores .)
+    SUPERIOR        reduce using rule 5 (Comando -> Operadores .)
+    EQUALS          reduce using rule 5 (Comando -> Operadores .)
+    STRING          reduce using rule 5 (Comando -> Operadores .)
+    EMIT            reduce using rule 5 (Comando -> Operadores .)
+    DOT             reduce using rule 5 (Comando -> Operadores .)
+    CHAR            reduce using rule 5 (Comando -> Operadores .)
+    SPACE           reduce using rule 5 (Comando -> Operadores .)
+    SPACES          reduce using rule 5 (Comando -> Operadores .)
+    CR              reduce using rule 5 (Comando -> Operadores .)
+    KEY             reduce using rule 5 (Comando -> Operadores .)
+    DUP             reduce using rule 5 (Comando -> Operadores .)
+    2DUP            reduce using rule 5 (Comando -> Operadores .)
+    SWAP            reduce using rule 5 (Comando -> Operadores .)
+    DROP            reduce using rule 5 (Comando -> Operadores .)
+    IF              reduce using rule 5 (Comando -> Operadores .)
+    DO              reduce using rule 5 (Comando -> Operadores .)
+    NAME            reduce using rule 5 (Comando -> Operadores .)
+    VARIABLE        reduce using rule 5 (Comando -> Operadores .)
+    EXCLAMATION     reduce using rule 5 (Comando -> Operadores .)
+    AT              reduce using rule 5 (Comando -> Operadores .)
+    $end            reduce using rule 5 (Comando -> Operadores .)
+    ELSE            reduce using rule 5 (Comando -> Operadores .)
+    THEN            reduce using rule 5 (Comando -> Operadores .)
+    LOOP            reduce using rule 5 (Comando -> Operadores .)
+    SEMICOLON       reduce using rule 5 (Comando -> Operadores .)
+
+
+state 6
+
+    (6) Comando -> Declaracao .
+
+    DEFINED_WORD    reduce using rule 6 (Comando -> Declaracao .)
+    INT             reduce using rule 6 (Comando -> Declaracao .)
+    PLUS            reduce using rule 6 (Comando -> Declaracao .)
+    MINUS           reduce using rule 6 (Comando -> Declaracao .)
+    TIMES           reduce using rule 6 (Comando -> Declaracao .)
+    DIVIDE          reduce using rule 6 (Comando -> Declaracao .)
+    MOD             reduce using rule 6 (Comando -> Declaracao .)
+    SUPEQ           reduce using rule 6 (Comando -> Declaracao .)
+    INFEQ           reduce using rule 6 (Comando -> Declaracao .)
+    INFERIOR        reduce using rule 6 (Comando -> Declaracao .)
+    SUPERIOR        reduce using rule 6 (Comando -> Declaracao .)
+    EQUALS          reduce using rule 6 (Comando -> Declaracao .)
+    STRING          reduce using rule 6 (Comando -> Declaracao .)
+    EMIT            reduce using rule 6 (Comando -> Declaracao .)
+    DOT             reduce using rule 6 (Comando -> Declaracao .)
+    CHAR            reduce using rule 6 (Comando -> Declaracao .)
+    SPACE           reduce using rule 6 (Comando -> Declaracao .)
+    SPACES          reduce using rule 6 (Comando -> Declaracao .)
+    CR              reduce using rule 6 (Comando -> Declaracao .)
+    KEY             reduce using rule 6 (Comando -> Declaracao .)
+    DUP             reduce using rule 6 (Comando -> Declaracao .)
+    2DUP            reduce using rule 6 (Comando -> Declaracao .)
+    SWAP            reduce using rule 6 (Comando -> Declaracao .)
+    DROP            reduce using rule 6 (Comando -> Declaracao .)
+    IF              reduce using rule 6 (Comando -> Declaracao .)
+    DO              reduce using rule 6 (Comando -> Declaracao .)
+    NAME            reduce using rule 6 (Comando -> Declaracao .)
+    VARIABLE        reduce using rule 6 (Comando -> Declaracao .)
+    EXCLAMATION     reduce using rule 6 (Comando -> Declaracao .)
+    AT              reduce using rule 6 (Comando -> Declaracao .)
+    $end            reduce using rule 6 (Comando -> Declaracao .)
+    ELSE            reduce using rule 6 (Comando -> Declaracao .)
+    THEN            reduce using rule 6 (Comando -> Declaracao .)
+    LOOP            reduce using rule 6 (Comando -> Declaracao .)
+    SEMICOLON       reduce using rule 6 (Comando -> Declaracao .)
+
+
+state 7
+
+    (7) Comando -> Print .
+
+    DEFINED_WORD    reduce using rule 7 (Comando -> Print .)
+    INT             reduce using rule 7 (Comando -> Print .)
+    PLUS            reduce using rule 7 (Comando -> Print .)
+    MINUS           reduce using rule 7 (Comando -> Print .)
+    TIMES           reduce using rule 7 (Comando -> Print .)
+    DIVIDE          reduce using rule 7 (Comando -> Print .)
+    MOD             reduce using rule 7 (Comando -> Print .)
+    SUPEQ           reduce using rule 7 (Comando -> Print .)
+    INFEQ           reduce using rule 7 (Comando -> Print .)
+    INFERIOR        reduce using rule 7 (Comando -> Print .)
+    SUPERIOR        reduce using rule 7 (Comando -> Print .)
+    EQUALS          reduce using rule 7 (Comando -> Print .)
+    STRING          reduce using rule 7 (Comando -> Print .)
+    EMIT            reduce using rule 7 (Comando -> Print .)
+    DOT             reduce using rule 7 (Comando -> Print .)
+    CHAR            reduce using rule 7 (Comando -> Print .)
+    SPACE           reduce using rule 7 (Comando -> Print .)
+    SPACES          reduce using rule 7 (Comando -> Print .)
+    CR              reduce using rule 7 (Comando -> Print .)
+    KEY             reduce using rule 7 (Comando -> Print .)
+    DUP             reduce using rule 7 (Comando -> Print .)
+    2DUP            reduce using rule 7 (Comando -> Print .)
+    SWAP            reduce using rule 7 (Comando -> Print .)
+    DROP            reduce using rule 7 (Comando -> Print .)
+    IF              reduce using rule 7 (Comando -> Print .)
+    DO              reduce using rule 7 (Comando -> Print .)
+    NAME            reduce using rule 7 (Comando -> Print .)
+    VARIABLE        reduce using rule 7 (Comando -> Print .)
+    EXCLAMATION     reduce using rule 7 (Comando -> Print .)
+    AT              reduce using rule 7 (Comando -> Print .)
+    $end            reduce using rule 7 (Comando -> Print .)
+    ELSE            reduce using rule 7 (Comando -> Print .)
+    THEN            reduce using rule 7 (Comando -> Print .)
+    LOOP            reduce using rule 7 (Comando -> Print .)
+    SEMICOLON       reduce using rule 7 (Comando -> Print .)
+
+
+state 8
+
+    (8) Comando -> Operacao .
+
+    DEFINED_WORD    reduce using rule 8 (Comando -> Operacao .)
+    INT             reduce using rule 8 (Comando -> Operacao .)
+    PLUS            reduce using rule 8 (Comando -> Operacao .)
+    MINUS           reduce using rule 8 (Comando -> Operacao .)
+    TIMES           reduce using rule 8 (Comando -> Operacao .)
+    DIVIDE          reduce using rule 8 (Comando -> Operacao .)
+    MOD             reduce using rule 8 (Comando -> Operacao .)
+    SUPEQ           reduce using rule 8 (Comando -> Operacao .)
+    INFEQ           reduce using rule 8 (Comando -> Operacao .)
+    INFERIOR        reduce using rule 8 (Comando -> Operacao .)
+    SUPERIOR        reduce using rule 8 (Comando -> Operacao .)
+    EQUALS          reduce using rule 8 (Comando -> Operacao .)
+    STRING          reduce using rule 8 (Comando -> Operacao .)
+    EMIT            reduce using rule 8 (Comando -> Operacao .)
+    DOT             reduce using rule 8 (Comando -> Operacao .)
+    CHAR            reduce using rule 8 (Comando -> Operacao .)
+    SPACE           reduce using rule 8 (Comando -> Operacao .)
+    SPACES          reduce using rule 8 (Comando -> Operacao .)
+    CR              reduce using rule 8 (Comando -> Operacao .)
+    KEY             reduce using rule 8 (Comando -> Operacao .)
+    DUP             reduce using rule 8 (Comando -> Operacao .)
+    2DUP            reduce using rule 8 (Comando -> Operacao .)
+    SWAP            reduce using rule 8 (Comando -> Operacao .)
+    DROP            reduce using rule 8 (Comando -> Operacao .)
+    IF              reduce using rule 8 (Comando -> Operacao .)
+    DO              reduce using rule 8 (Comando -> Operacao .)
+    NAME            reduce using rule 8 (Comando -> Operacao .)
+    VARIABLE        reduce using rule 8 (Comando -> Operacao .)
+    EXCLAMATION     reduce using rule 8 (Comando -> Operacao .)
+    AT              reduce using rule 8 (Comando -> Operacao .)
+    $end            reduce using rule 8 (Comando -> Operacao .)
+    ELSE            reduce using rule 8 (Comando -> Operacao .)
+    THEN            reduce using rule 8 (Comando -> Operacao .)
+    LOOP            reduce using rule 8 (Comando -> Operacao .)
+    SEMICOLON       reduce using rule 8 (Comando -> Operacao .)
+
+
+state 9
+
+    (9) Comando -> Condicional .
+
+    DEFINED_WORD    reduce using rule 9 (Comando -> Condicional .)
+    INT             reduce using rule 9 (Comando -> Condicional .)
+    PLUS            reduce using rule 9 (Comando -> Condicional .)
+    MINUS           reduce using rule 9 (Comando -> Condicional .)
+    TIMES           reduce using rule 9 (Comando -> Condicional .)
+    DIVIDE          reduce using rule 9 (Comando -> Condicional .)
+    MOD             reduce using rule 9 (Comando -> Condicional .)
+    SUPEQ           reduce using rule 9 (Comando -> Condicional .)
+    INFEQ           reduce using rule 9 (Comando -> Condicional .)
+    INFERIOR        reduce using rule 9 (Comando -> Condicional .)
+    SUPERIOR        reduce using rule 9 (Comando -> Condicional .)
+    EQUALS          reduce using rule 9 (Comando -> Condicional .)
+    STRING          reduce using rule 9 (Comando -> Condicional .)
+    EMIT            reduce using rule 9 (Comando -> Condicional .)
+    DOT             reduce using rule 9 (Comando -> Condicional .)
+    CHAR            reduce using rule 9 (Comando -> Condicional .)
+    SPACE           reduce using rule 9 (Comando -> Condicional .)
+    SPACES          reduce using rule 9 (Comando -> Condicional .)
+    CR              reduce using rule 9 (Comando -> Condicional .)
+    KEY             reduce using rule 9 (Comando -> Condicional .)
+    DUP             reduce using rule 9 (Comando -> Condicional .)
+    2DUP            reduce using rule 9 (Comando -> Condicional .)
+    SWAP            reduce using rule 9 (Comando -> Condicional .)
+    DROP            reduce using rule 9 (Comando -> Condicional .)
+    IF              reduce using rule 9 (Comando -> Condicional .)
+    DO              reduce using rule 9 (Comando -> Condicional .)
+    NAME            reduce using rule 9 (Comando -> Condicional .)
+    VARIABLE        reduce using rule 9 (Comando -> Condicional .)
+    EXCLAMATION     reduce using rule 9 (Comando -> Condicional .)
+    AT              reduce using rule 9 (Comando -> Condicional .)
+    $end            reduce using rule 9 (Comando -> Condicional .)
+    ELSE            reduce using rule 9 (Comando -> Condicional .)
+    THEN            reduce using rule 9 (Comando -> Condicional .)
+    LOOP            reduce using rule 9 (Comando -> Condicional .)
+    SEMICOLON       reduce using rule 9 (Comando -> Condicional .)
+
+
+state 10
+
+    (10) Comando -> Ciclo .
+
+    DEFINED_WORD    reduce using rule 10 (Comando -> Ciclo .)
+    INT             reduce using rule 10 (Comando -> Ciclo .)
+    PLUS            reduce using rule 10 (Comando -> Ciclo .)
+    MINUS           reduce using rule 10 (Comando -> Ciclo .)
+    TIMES           reduce using rule 10 (Comando -> Ciclo .)
+    DIVIDE          reduce using rule 10 (Comando -> Ciclo .)
+    MOD             reduce using rule 10 (Comando -> Ciclo .)
+    SUPEQ           reduce using rule 10 (Comando -> Ciclo .)
+    INFEQ           reduce using rule 10 (Comando -> Ciclo .)
+    INFERIOR        reduce using rule 10 (Comando -> Ciclo .)
+    SUPERIOR        reduce using rule 10 (Comando -> Ciclo .)
+    EQUALS          reduce using rule 10 (Comando -> Ciclo .)
+    STRING          reduce using rule 10 (Comando -> Ciclo .)
+    EMIT            reduce using rule 10 (Comando -> Ciclo .)
+    DOT             reduce using rule 10 (Comando -> Ciclo .)
+    CHAR            reduce using rule 10 (Comando -> Ciclo .)
+    SPACE           reduce using rule 10 (Comando -> Ciclo .)
+    SPACES          reduce using rule 10 (Comando -> Ciclo .)
+    CR              reduce using rule 10 (Comando -> Ciclo .)
+    KEY             reduce using rule 10 (Comando -> Ciclo .)
+    DUP             reduce using rule 10 (Comando -> Ciclo .)
+    2DUP            reduce using rule 10 (Comando -> Ciclo .)
+    SWAP            reduce using rule 10 (Comando -> Ciclo .)
+    DROP            reduce using rule 10 (Comando -> Ciclo .)
+    IF              reduce using rule 10 (Comando -> Ciclo .)
+    DO              reduce using rule 10 (Comando -> Ciclo .)
+    NAME            reduce using rule 10 (Comando -> Ciclo .)
+    VARIABLE        reduce using rule 10 (Comando -> Ciclo .)
+    EXCLAMATION     reduce using rule 10 (Comando -> Ciclo .)
+    AT              reduce using rule 10 (Comando -> Ciclo .)
+    $end            reduce using rule 10 (Comando -> Ciclo .)
+    ELSE            reduce using rule 10 (Comando -> Ciclo .)
+    THEN            reduce using rule 10 (Comando -> Ciclo .)
+    LOOP            reduce using rule 10 (Comando -> Ciclo .)
+    SEMICOLON       reduce using rule 10 (Comando -> Ciclo .)
+
+
+state 11
+
+    (11) Comando -> DEFINED_WORD .
+
+    DEFINED_WORD    reduce using rule 11 (Comando -> DEFINED_WORD .)
+    INT             reduce using rule 11 (Comando -> DEFINED_WORD .)
+    PLUS            reduce using rule 11 (Comando -> DEFINED_WORD .)
+    MINUS           reduce using rule 11 (Comando -> DEFINED_WORD .)
+    TIMES           reduce using rule 11 (Comando -> DEFINED_WORD .)
+    DIVIDE          reduce using rule 11 (Comando -> DEFINED_WORD .)
+    MOD             reduce using rule 11 (Comando -> DEFINED_WORD .)
+    SUPEQ           reduce using rule 11 (Comando -> DEFINED_WORD .)
+    INFEQ           reduce using rule 11 (Comando -> DEFINED_WORD .)
+    INFERIOR        reduce using rule 11 (Comando -> DEFINED_WORD .)
+    SUPERIOR        reduce using rule 11 (Comando -> DEFINED_WORD .)
+    EQUALS          reduce using rule 11 (Comando -> DEFINED_WORD .)
+    STRING          reduce using rule 11 (Comando -> DEFINED_WORD .)
+    EMIT            reduce using rule 11 (Comando -> DEFINED_WORD .)
+    DOT             reduce using rule 11 (Comando -> DEFINED_WORD .)
+    CHAR            reduce using rule 11 (Comando -> DEFINED_WORD .)
+    SPACE           reduce using rule 11 (Comando -> DEFINED_WORD .)
+    SPACES          reduce using rule 11 (Comando -> DEFINED_WORD .)
+    CR              reduce using rule 11 (Comando -> DEFINED_WORD .)
+    KEY             reduce using rule 11 (Comando -> DEFINED_WORD .)
+    DUP             reduce using rule 11 (Comando -> DEFINED_WORD .)
+    2DUP            reduce using rule 11 (Comando -> DEFINED_WORD .)
+    SWAP            reduce using rule 11 (Comando -> DEFINED_WORD .)
+    DROP            reduce using rule 11 (Comando -> DEFINED_WORD .)
+    IF              reduce using rule 11 (Comando -> DEFINED_WORD .)
+    DO              reduce using rule 11 (Comando -> DEFINED_WORD .)
+    NAME            reduce using rule 11 (Comando -> DEFINED_WORD .)
+    VARIABLE        reduce using rule 11 (Comando -> DEFINED_WORD .)
+    EXCLAMATION     reduce using rule 11 (Comando -> DEFINED_WORD .)
+    AT              reduce using rule 11 (Comando -> DEFINED_WORD .)
+    $end            reduce using rule 11 (Comando -> DEFINED_WORD .)
+    ELSE            reduce using rule 11 (Comando -> DEFINED_WORD .)
+    THEN            reduce using rule 11 (Comando -> DEFINED_WORD .)
+    LOOP            reduce using rule 11 (Comando -> DEFINED_WORD .)
+    SEMICOLON       reduce using rule 11 (Comando -> DEFINED_WORD .)
+
+
+state 12
+
+    (29) Valores -> INT .
+
+    DEFINED_WORD    reduce using rule 29 (Valores -> INT .)
+    INT             reduce using rule 29 (Valores -> INT .)
+    PLUS            reduce using rule 29 (Valores -> INT .)
+    MINUS           reduce using rule 29 (Valores -> INT .)
+    TIMES           reduce using rule 29 (Valores -> INT .)
+    DIVIDE          reduce using rule 29 (Valores -> INT .)
+    MOD             reduce using rule 29 (Valores -> INT .)
+    SUPEQ           reduce using rule 29 (Valores -> INT .)
+    INFEQ           reduce using rule 29 (Valores -> INT .)
+    INFERIOR        reduce using rule 29 (Valores -> INT .)
+    SUPERIOR        reduce using rule 29 (Valores -> INT .)
+    EQUALS          reduce using rule 29 (Valores -> INT .)
+    STRING          reduce using rule 29 (Valores -> INT .)
+    EMIT            reduce using rule 29 (Valores -> INT .)
+    DOT             reduce using rule 29 (Valores -> INT .)
+    CHAR            reduce using rule 29 (Valores -> INT .)
+    SPACE           reduce using rule 29 (Valores -> INT .)
+    SPACES          reduce using rule 29 (Valores -> INT .)
+    CR              reduce using rule 29 (Valores -> INT .)
+    KEY             reduce using rule 29 (Valores -> INT .)
+    DUP             reduce using rule 29 (Valores -> INT .)
+    2DUP            reduce using rule 29 (Valores -> INT .)
+    SWAP            reduce using rule 29 (Valores -> INT .)
+    DROP            reduce using rule 29 (Valores -> INT .)
+    IF              reduce using rule 29 (Valores -> INT .)
+    DO              reduce using rule 29 (Valores -> INT .)
+    NAME            reduce using rule 29 (Valores -> INT .)
+    VARIABLE        reduce using rule 29 (Valores -> INT .)
+    EXCLAMATION     reduce using rule 29 (Valores -> INT .)
+    AT              reduce using rule 29 (Valores -> INT .)
+    $end            reduce using rule 29 (Valores -> INT .)
+    ELSE            reduce using rule 29 (Valores -> INT .)
+    THEN            reduce using rule 29 (Valores -> INT .)
+    LOOP            reduce using rule 29 (Valores -> INT .)
+    SEMICOLON       reduce using rule 29 (Valores -> INT .)
+
+
+state 13
+
+    (36) Operadores -> PLUS .
+
+    DEFINED_WORD    reduce using rule 36 (Operadores -> PLUS .)
+    INT             reduce using rule 36 (Operadores -> PLUS .)
+    PLUS            reduce using rule 36 (Operadores -> PLUS .)
+    MINUS           reduce using rule 36 (Operadores -> PLUS .)
+    TIMES           reduce using rule 36 (Operadores -> PLUS .)
+    DIVIDE          reduce using rule 36 (Operadores -> PLUS .)
+    MOD             reduce using rule 36 (Operadores -> PLUS .)
+    SUPEQ           reduce using rule 36 (Operadores -> PLUS .)
+    INFEQ           reduce using rule 36 (Operadores -> PLUS .)
+    INFERIOR        reduce using rule 36 (Operadores -> PLUS .)
+    SUPERIOR        reduce using rule 36 (Operadores -> PLUS .)
+    EQUALS          reduce using rule 36 (Operadores -> PLUS .)
+    STRING          reduce using rule 36 (Operadores -> PLUS .)
+    EMIT            reduce using rule 36 (Operadores -> PLUS .)
+    DOT             reduce using rule 36 (Operadores -> PLUS .)
+    CHAR            reduce using rule 36 (Operadores -> PLUS .)
+    SPACE           reduce using rule 36 (Operadores -> PLUS .)
+    SPACES          reduce using rule 36 (Operadores -> PLUS .)
+    CR              reduce using rule 36 (Operadores -> PLUS .)
+    KEY             reduce using rule 36 (Operadores -> PLUS .)
+    DUP             reduce using rule 36 (Operadores -> PLUS .)
+    2DUP            reduce using rule 36 (Operadores -> PLUS .)
+    SWAP            reduce using rule 36 (Operadores -> PLUS .)
+    DROP            reduce using rule 36 (Operadores -> PLUS .)
+    IF              reduce using rule 36 (Operadores -> PLUS .)
+    DO              reduce using rule 36 (Operadores -> PLUS .)
+    NAME            reduce using rule 36 (Operadores -> PLUS .)
+    VARIABLE        reduce using rule 36 (Operadores -> PLUS .)
+    EXCLAMATION     reduce using rule 36 (Operadores -> PLUS .)
+    AT              reduce using rule 36 (Operadores -> PLUS .)
+    $end            reduce using rule 36 (Operadores -> PLUS .)
+    ELSE            reduce using rule 36 (Operadores -> PLUS .)
+    THEN            reduce using rule 36 (Operadores -> PLUS .)
+    LOOP            reduce using rule 36 (Operadores -> PLUS .)
+    SEMICOLON       reduce using rule 36 (Operadores -> PLUS .)
+
+
+state 14
+
+    (37) Operadores -> MINUS .
+
+    DEFINED_WORD    reduce using rule 37 (Operadores -> MINUS .)
+    INT             reduce using rule 37 (Operadores -> MINUS .)
+    PLUS            reduce using rule 37 (Operadores -> MINUS .)
+    MINUS           reduce using rule 37 (Operadores -> MINUS .)
+    TIMES           reduce using rule 37 (Operadores -> MINUS .)
+    DIVIDE          reduce using rule 37 (Operadores -> MINUS .)
+    MOD             reduce using rule 37 (Operadores -> MINUS .)
+    SUPEQ           reduce using rule 37 (Operadores -> MINUS .)
+    INFEQ           reduce using rule 37 (Operadores -> MINUS .)
+    INFERIOR        reduce using rule 37 (Operadores -> MINUS .)
+    SUPERIOR        reduce using rule 37 (Operadores -> MINUS .)
+    EQUALS          reduce using rule 37 (Operadores -> MINUS .)
+    STRING          reduce using rule 37 (Operadores -> MINUS .)
+    EMIT            reduce using rule 37 (Operadores -> MINUS .)
+    DOT             reduce using rule 37 (Operadores -> MINUS .)
+    CHAR            reduce using rule 37 (Operadores -> MINUS .)
+    SPACE           reduce using rule 37 (Operadores -> MINUS .)
+    SPACES          reduce using rule 37 (Operadores -> MINUS .)
+    CR              reduce using rule 37 (Operadores -> MINUS .)
+    KEY             reduce using rule 37 (Operadores -> MINUS .)
+    DUP             reduce using rule 37 (Operadores -> MINUS .)
+    2DUP            reduce using rule 37 (Operadores -> MINUS .)
+    SWAP            reduce using rule 37 (Operadores -> MINUS .)
+    DROP            reduce using rule 37 (Operadores -> MINUS .)
+    IF              reduce using rule 37 (Operadores -> MINUS .)
+    DO              reduce using rule 37 (Operadores -> MINUS .)
+    NAME            reduce using rule 37 (Operadores -> MINUS .)
+    VARIABLE        reduce using rule 37 (Operadores -> MINUS .)
+    EXCLAMATION     reduce using rule 37 (Operadores -> MINUS .)
+    AT              reduce using rule 37 (Operadores -> MINUS .)
+    $end            reduce using rule 37 (Operadores -> MINUS .)
+    ELSE            reduce using rule 37 (Operadores -> MINUS .)
+    THEN            reduce using rule 37 (Operadores -> MINUS .)
+    LOOP            reduce using rule 37 (Operadores -> MINUS .)
+    SEMICOLON       reduce using rule 37 (Operadores -> MINUS .)
+
+
+state 15
+
+    (38) Operadores -> TIMES .
+
+    DEFINED_WORD    reduce using rule 38 (Operadores -> TIMES .)
+    INT             reduce using rule 38 (Operadores -> TIMES .)
+    PLUS            reduce using rule 38 (Operadores -> TIMES .)
+    MINUS           reduce using rule 38 (Operadores -> TIMES .)
+    TIMES           reduce using rule 38 (Operadores -> TIMES .)
+    DIVIDE          reduce using rule 38 (Operadores -> TIMES .)
+    MOD             reduce using rule 38 (Operadores -> TIMES .)
+    SUPEQ           reduce using rule 38 (Operadores -> TIMES .)
+    INFEQ           reduce using rule 38 (Operadores -> TIMES .)
+    INFERIOR        reduce using rule 38 (Operadores -> TIMES .)
+    SUPERIOR        reduce using rule 38 (Operadores -> TIMES .)
+    EQUALS          reduce using rule 38 (Operadores -> TIMES .)
+    STRING          reduce using rule 38 (Operadores -> TIMES .)
+    EMIT            reduce using rule 38 (Operadores -> TIMES .)
+    DOT             reduce using rule 38 (Operadores -> TIMES .)
+    CHAR            reduce using rule 38 (Operadores -> TIMES .)
+    SPACE           reduce using rule 38 (Operadores -> TIMES .)
+    SPACES          reduce using rule 38 (Operadores -> TIMES .)
+    CR              reduce using rule 38 (Operadores -> TIMES .)
+    KEY             reduce using rule 38 (Operadores -> TIMES .)
+    DUP             reduce using rule 38 (Operadores -> TIMES .)
+    2DUP            reduce using rule 38 (Operadores -> TIMES .)
+    SWAP            reduce using rule 38 (Operadores -> TIMES .)
+    DROP            reduce using rule 38 (Operadores -> TIMES .)
+    IF              reduce using rule 38 (Operadores -> TIMES .)
+    DO              reduce using rule 38 (Operadores -> TIMES .)
+    NAME            reduce using rule 38 (Operadores -> TIMES .)
+    VARIABLE        reduce using rule 38 (Operadores -> TIMES .)
+    EXCLAMATION     reduce using rule 38 (Operadores -> TIMES .)
+    AT              reduce using rule 38 (Operadores -> TIMES .)
+    $end            reduce using rule 38 (Operadores -> TIMES .)
+    ELSE            reduce using rule 38 (Operadores -> TIMES .)
+    THEN            reduce using rule 38 (Operadores -> TIMES .)
+    LOOP            reduce using rule 38 (Operadores -> TIMES .)
+    SEMICOLON       reduce using rule 38 (Operadores -> TIMES .)
+
+
+state 16
+
+    (39) Operadores -> DIVIDE .
+
+    DEFINED_WORD    reduce using rule 39 (Operadores -> DIVIDE .)
+    INT             reduce using rule 39 (Operadores -> DIVIDE .)
+    PLUS            reduce using rule 39 (Operadores -> DIVIDE .)
+    MINUS           reduce using rule 39 (Operadores -> DIVIDE .)
+    TIMES           reduce using rule 39 (Operadores -> DIVIDE .)
+    DIVIDE          reduce using rule 39 (Operadores -> DIVIDE .)
+    MOD             reduce using rule 39 (Operadores -> DIVIDE .)
+    SUPEQ           reduce using rule 39 (Operadores -> DIVIDE .)
+    INFEQ           reduce using rule 39 (Operadores -> DIVIDE .)
+    INFERIOR        reduce using rule 39 (Operadores -> DIVIDE .)
+    SUPERIOR        reduce using rule 39 (Operadores -> DIVIDE .)
+    EQUALS          reduce using rule 39 (Operadores -> DIVIDE .)
+    STRING          reduce using rule 39 (Operadores -> DIVIDE .)
+    EMIT            reduce using rule 39 (Operadores -> DIVIDE .)
+    DOT             reduce using rule 39 (Operadores -> DIVIDE .)
+    CHAR            reduce using rule 39 (Operadores -> DIVIDE .)
+    SPACE           reduce using rule 39 (Operadores -> DIVIDE .)
+    SPACES          reduce using rule 39 (Operadores -> DIVIDE .)
+    CR              reduce using rule 39 (Operadores -> DIVIDE .)
+    KEY             reduce using rule 39 (Operadores -> DIVIDE .)
+    DUP             reduce using rule 39 (Operadores -> DIVIDE .)
+    2DUP            reduce using rule 39 (Operadores -> DIVIDE .)
+    SWAP            reduce using rule 39 (Operadores -> DIVIDE .)
+    DROP            reduce using rule 39 (Operadores -> DIVIDE .)
+    IF              reduce using rule 39 (Operadores -> DIVIDE .)
+    DO              reduce using rule 39 (Operadores -> DIVIDE .)
+    NAME            reduce using rule 39 (Operadores -> DIVIDE .)
+    VARIABLE        reduce using rule 39 (Operadores -> DIVIDE .)
+    EXCLAMATION     reduce using rule 39 (Operadores -> DIVIDE .)
+    AT              reduce using rule 39 (Operadores -> DIVIDE .)
+    $end            reduce using rule 39 (Operadores -> DIVIDE .)
+    ELSE            reduce using rule 39 (Operadores -> DIVIDE .)
+    THEN            reduce using rule 39 (Operadores -> DIVIDE .)
+    LOOP            reduce using rule 39 (Operadores -> DIVIDE .)
+    SEMICOLON       reduce using rule 39 (Operadores -> DIVIDE .)
+
+
+state 17
+
+    (40) Operadores -> MOD .
+
+    DEFINED_WORD    reduce using rule 40 (Operadores -> MOD .)
+    INT             reduce using rule 40 (Operadores -> MOD .)
+    PLUS            reduce using rule 40 (Operadores -> MOD .)
+    MINUS           reduce using rule 40 (Operadores -> MOD .)
+    TIMES           reduce using rule 40 (Operadores -> MOD .)
+    DIVIDE          reduce using rule 40 (Operadores -> MOD .)
+    MOD             reduce using rule 40 (Operadores -> MOD .)
+    SUPEQ           reduce using rule 40 (Operadores -> MOD .)
+    INFEQ           reduce using rule 40 (Operadores -> MOD .)
+    INFERIOR        reduce using rule 40 (Operadores -> MOD .)
+    SUPERIOR        reduce using rule 40 (Operadores -> MOD .)
+    EQUALS          reduce using rule 40 (Operadores -> MOD .)
+    STRING          reduce using rule 40 (Operadores -> MOD .)
+    EMIT            reduce using rule 40 (Operadores -> MOD .)
+    DOT             reduce using rule 40 (Operadores -> MOD .)
+    CHAR            reduce using rule 40 (Operadores -> MOD .)
+    SPACE           reduce using rule 40 (Operadores -> MOD .)
+    SPACES          reduce using rule 40 (Operadores -> MOD .)
+    CR              reduce using rule 40 (Operadores -> MOD .)
+    KEY             reduce using rule 40 (Operadores -> MOD .)
+    DUP             reduce using rule 40 (Operadores -> MOD .)
+    2DUP            reduce using rule 40 (Operadores -> MOD .)
+    SWAP            reduce using rule 40 (Operadores -> MOD .)
+    DROP            reduce using rule 40 (Operadores -> MOD .)
+    IF              reduce using rule 40 (Operadores -> MOD .)
+    DO              reduce using rule 40 (Operadores -> MOD .)
+    NAME            reduce using rule 40 (Operadores -> MOD .)
+    VARIABLE        reduce using rule 40 (Operadores -> MOD .)
+    EXCLAMATION     reduce using rule 40 (Operadores -> MOD .)
+    AT              reduce using rule 40 (Operadores -> MOD .)
+    $end            reduce using rule 40 (Operadores -> MOD .)
+    ELSE            reduce using rule 40 (Operadores -> MOD .)
+    THEN            reduce using rule 40 (Operadores -> MOD .)
+    LOOP            reduce using rule 40 (Operadores -> MOD .)
+    SEMICOLON       reduce using rule 40 (Operadores -> MOD .)
+
+
+state 18
+
+    (41) Operadores -> SUPEQ .
+
+    DEFINED_WORD    reduce using rule 41 (Operadores -> SUPEQ .)
+    INT             reduce using rule 41 (Operadores -> SUPEQ .)
+    PLUS            reduce using rule 41 (Operadores -> SUPEQ .)
+    MINUS           reduce using rule 41 (Operadores -> SUPEQ .)
+    TIMES           reduce using rule 41 (Operadores -> SUPEQ .)
+    DIVIDE          reduce using rule 41 (Operadores -> SUPEQ .)
+    MOD             reduce using rule 41 (Operadores -> SUPEQ .)
+    SUPEQ           reduce using rule 41 (Operadores -> SUPEQ .)
+    INFEQ           reduce using rule 41 (Operadores -> SUPEQ .)
+    INFERIOR        reduce using rule 41 (Operadores -> SUPEQ .)
+    SUPERIOR        reduce using rule 41 (Operadores -> SUPEQ .)
+    EQUALS          reduce using rule 41 (Operadores -> SUPEQ .)
+    STRING          reduce using rule 41 (Operadores -> SUPEQ .)
+    EMIT            reduce using rule 41 (Operadores -> SUPEQ .)
+    DOT             reduce using rule 41 (Operadores -> SUPEQ .)
+    CHAR            reduce using rule 41 (Operadores -> SUPEQ .)
+    SPACE           reduce using rule 41 (Operadores -> SUPEQ .)
+    SPACES          reduce using rule 41 (Operadores -> SUPEQ .)
+    CR              reduce using rule 41 (Operadores -> SUPEQ .)
+    KEY             reduce using rule 41 (Operadores -> SUPEQ .)
+    DUP             reduce using rule 41 (Operadores -> SUPEQ .)
+    2DUP            reduce using rule 41 (Operadores -> SUPEQ .)
+    SWAP            reduce using rule 41 (Operadores -> SUPEQ .)
+    DROP            reduce using rule 41 (Operadores -> SUPEQ .)
+    IF              reduce using rule 41 (Operadores -> SUPEQ .)
+    DO              reduce using rule 41 (Operadores -> SUPEQ .)
+    NAME            reduce using rule 41 (Operadores -> SUPEQ .)
+    VARIABLE        reduce using rule 41 (Operadores -> SUPEQ .)
+    EXCLAMATION     reduce using rule 41 (Operadores -> SUPEQ .)
+    AT              reduce using rule 41 (Operadores -> SUPEQ .)
+    $end            reduce using rule 41 (Operadores -> SUPEQ .)
+    ELSE            reduce using rule 41 (Operadores -> SUPEQ .)
+    THEN            reduce using rule 41 (Operadores -> SUPEQ .)
+    LOOP            reduce using rule 41 (Operadores -> SUPEQ .)
+    SEMICOLON       reduce using rule 41 (Operadores -> SUPEQ .)
+
+
+state 19
+
+    (42) Operadores -> INFEQ .
+
+    DEFINED_WORD    reduce using rule 42 (Operadores -> INFEQ .)
+    INT             reduce using rule 42 (Operadores -> INFEQ .)
+    PLUS            reduce using rule 42 (Operadores -> INFEQ .)
+    MINUS           reduce using rule 42 (Operadores -> INFEQ .)
+    TIMES           reduce using rule 42 (Operadores -> INFEQ .)
+    DIVIDE          reduce using rule 42 (Operadores -> INFEQ .)
+    MOD             reduce using rule 42 (Operadores -> INFEQ .)
+    SUPEQ           reduce using rule 42 (Operadores -> INFEQ .)
+    INFEQ           reduce using rule 42 (Operadores -> INFEQ .)
+    INFERIOR        reduce using rule 42 (Operadores -> INFEQ .)
+    SUPERIOR        reduce using rule 42 (Operadores -> INFEQ .)
+    EQUALS          reduce using rule 42 (Operadores -> INFEQ .)
+    STRING          reduce using rule 42 (Operadores -> INFEQ .)
+    EMIT            reduce using rule 42 (Operadores -> INFEQ .)
+    DOT             reduce using rule 42 (Operadores -> INFEQ .)
+    CHAR            reduce using rule 42 (Operadores -> INFEQ .)
+    SPACE           reduce using rule 42 (Operadores -> INFEQ .)
+    SPACES          reduce using rule 42 (Operadores -> INFEQ .)
+    CR              reduce using rule 42 (Operadores -> INFEQ .)
+    KEY             reduce using rule 42 (Operadores -> INFEQ .)
+    DUP             reduce using rule 42 (Operadores -> INFEQ .)
+    2DUP            reduce using rule 42 (Operadores -> INFEQ .)
+    SWAP            reduce using rule 42 (Operadores -> INFEQ .)
+    DROP            reduce using rule 42 (Operadores -> INFEQ .)
+    IF              reduce using rule 42 (Operadores -> INFEQ .)
+    DO              reduce using rule 42 (Operadores -> INFEQ .)
+    NAME            reduce using rule 42 (Operadores -> INFEQ .)
+    VARIABLE        reduce using rule 42 (Operadores -> INFEQ .)
+    EXCLAMATION     reduce using rule 42 (Operadores -> INFEQ .)
+    AT              reduce using rule 42 (Operadores -> INFEQ .)
+    $end            reduce using rule 42 (Operadores -> INFEQ .)
+    ELSE            reduce using rule 42 (Operadores -> INFEQ .)
+    THEN            reduce using rule 42 (Operadores -> INFEQ .)
+    LOOP            reduce using rule 42 (Operadores -> INFEQ .)
+    SEMICOLON       reduce using rule 42 (Operadores -> INFEQ .)
+
+
+state 20
+
+    (43) Operadores -> INFERIOR .
+
+    DEFINED_WORD    reduce using rule 43 (Operadores -> INFERIOR .)
+    INT             reduce using rule 43 (Operadores -> INFERIOR .)
+    PLUS            reduce using rule 43 (Operadores -> INFERIOR .)
+    MINUS           reduce using rule 43 (Operadores -> INFERIOR .)
+    TIMES           reduce using rule 43 (Operadores -> INFERIOR .)
+    DIVIDE          reduce using rule 43 (Operadores -> INFERIOR .)
+    MOD             reduce using rule 43 (Operadores -> INFERIOR .)
+    SUPEQ           reduce using rule 43 (Operadores -> INFERIOR .)
+    INFEQ           reduce using rule 43 (Operadores -> INFERIOR .)
+    INFERIOR        reduce using rule 43 (Operadores -> INFERIOR .)
+    SUPERIOR        reduce using rule 43 (Operadores -> INFERIOR .)
+    EQUALS          reduce using rule 43 (Operadores -> INFERIOR .)
+    STRING          reduce using rule 43 (Operadores -> INFERIOR .)
+    EMIT            reduce using rule 43 (Operadores -> INFERIOR .)
+    DOT             reduce using rule 43 (Operadores -> INFERIOR .)
+    CHAR            reduce using rule 43 (Operadores -> INFERIOR .)
+    SPACE           reduce using rule 43 (Operadores -> INFERIOR .)
+    SPACES          reduce using rule 43 (Operadores -> INFERIOR .)
+    CR              reduce using rule 43 (Operadores -> INFERIOR .)
+    KEY             reduce using rule 43 (Operadores -> INFERIOR .)
+    DUP             reduce using rule 43 (Operadores -> INFERIOR .)
+    2DUP            reduce using rule 43 (Operadores -> INFERIOR .)
+    SWAP            reduce using rule 43 (Operadores -> INFERIOR .)
+    DROP            reduce using rule 43 (Operadores -> INFERIOR .)
+    IF              reduce using rule 43 (Operadores -> INFERIOR .)
+    DO              reduce using rule 43 (Operadores -> INFERIOR .)
+    NAME            reduce using rule 43 (Operadores -> INFERIOR .)
+    VARIABLE        reduce using rule 43 (Operadores -> INFERIOR .)
+    EXCLAMATION     reduce using rule 43 (Operadores -> INFERIOR .)
+    AT              reduce using rule 43 (Operadores -> INFERIOR .)
+    $end            reduce using rule 43 (Operadores -> INFERIOR .)
+    ELSE            reduce using rule 43 (Operadores -> INFERIOR .)
+    THEN            reduce using rule 43 (Operadores -> INFERIOR .)
+    LOOP            reduce using rule 43 (Operadores -> INFERIOR .)
+    SEMICOLON       reduce using rule 43 (Operadores -> INFERIOR .)
+
+
+state 21
+
+    (44) Operadores -> SUPERIOR .
+
+    DEFINED_WORD    reduce using rule 44 (Operadores -> SUPERIOR .)
+    INT             reduce using rule 44 (Operadores -> SUPERIOR .)
+    PLUS            reduce using rule 44 (Operadores -> SUPERIOR .)
+    MINUS           reduce using rule 44 (Operadores -> SUPERIOR .)
+    TIMES           reduce using rule 44 (Operadores -> SUPERIOR .)
+    DIVIDE          reduce using rule 44 (Operadores -> SUPERIOR .)
+    MOD             reduce using rule 44 (Operadores -> SUPERIOR .)
+    SUPEQ           reduce using rule 44 (Operadores -> SUPERIOR .)
+    INFEQ           reduce using rule 44 (Operadores -> SUPERIOR .)
+    INFERIOR        reduce using rule 44 (Operadores -> SUPERIOR .)
+    SUPERIOR        reduce using rule 44 (Operadores -> SUPERIOR .)
+    EQUALS          reduce using rule 44 (Operadores -> SUPERIOR .)
+    STRING          reduce using rule 44 (Operadores -> SUPERIOR .)
+    EMIT            reduce using rule 44 (Operadores -> SUPERIOR .)
+    DOT             reduce using rule 44 (Operadores -> SUPERIOR .)
+    CHAR            reduce using rule 44 (Operadores -> SUPERIOR .)
+    SPACE           reduce using rule 44 (Operadores -> SUPERIOR .)
+    SPACES          reduce using rule 44 (Operadores -> SUPERIOR .)
+    CR              reduce using rule 44 (Operadores -> SUPERIOR .)
+    KEY             reduce using rule 44 (Operadores -> SUPERIOR .)
+    DUP             reduce using rule 44 (Operadores -> SUPERIOR .)
+    2DUP            reduce using rule 44 (Operadores -> SUPERIOR .)
+    SWAP            reduce using rule 44 (Operadores -> SUPERIOR .)
+    DROP            reduce using rule 44 (Operadores -> SUPERIOR .)
+    IF              reduce using rule 44 (Operadores -> SUPERIOR .)
+    DO              reduce using rule 44 (Operadores -> SUPERIOR .)
+    NAME            reduce using rule 44 (Operadores -> SUPERIOR .)
+    VARIABLE        reduce using rule 44 (Operadores -> SUPERIOR .)
+    EXCLAMATION     reduce using rule 44 (Operadores -> SUPERIOR .)
+    AT              reduce using rule 44 (Operadores -> SUPERIOR .)
+    $end            reduce using rule 44 (Operadores -> SUPERIOR .)
+    ELSE            reduce using rule 44 (Operadores -> SUPERIOR .)
+    THEN            reduce using rule 44 (Operadores -> SUPERIOR .)
+    LOOP            reduce using rule 44 (Operadores -> SUPERIOR .)
+    SEMICOLON       reduce using rule 44 (Operadores -> SUPERIOR .)
+
+
+state 22
+
+    (45) Operadores -> EQUALS .
+
+    DEFINED_WORD    reduce using rule 45 (Operadores -> EQUALS .)
+    INT             reduce using rule 45 (Operadores -> EQUALS .)
+    PLUS            reduce using rule 45 (Operadores -> EQUALS .)
+    MINUS           reduce using rule 45 (Operadores -> EQUALS .)
+    TIMES           reduce using rule 45 (Operadores -> EQUALS .)
+    DIVIDE          reduce using rule 45 (Operadores -> EQUALS .)
+    MOD             reduce using rule 45 (Operadores -> EQUALS .)
+    SUPEQ           reduce using rule 45 (Operadores -> EQUALS .)
+    INFEQ           reduce using rule 45 (Operadores -> EQUALS .)
+    INFERIOR        reduce using rule 45 (Operadores -> EQUALS .)
+    SUPERIOR        reduce using rule 45 (Operadores -> EQUALS .)
+    EQUALS          reduce using rule 45 (Operadores -> EQUALS .)
+    STRING          reduce using rule 45 (Operadores -> EQUALS .)
+    EMIT            reduce using rule 45 (Operadores -> EQUALS .)
+    DOT             reduce using rule 45 (Operadores -> EQUALS .)
+    CHAR            reduce using rule 45 (Operadores -> EQUALS .)
+    SPACE           reduce using rule 45 (Operadores -> EQUALS .)
+    SPACES          reduce using rule 45 (Operadores -> EQUALS .)
+    CR              reduce using rule 45 (Operadores -> EQUALS .)
+    KEY             reduce using rule 45 (Operadores -> EQUALS .)
+    DUP             reduce using rule 45 (Operadores -> EQUALS .)
+    2DUP            reduce using rule 45 (Operadores -> EQUALS .)
+    SWAP            reduce using rule 45 (Operadores -> EQUALS .)
+    DROP            reduce using rule 45 (Operadores -> EQUALS .)
+    IF              reduce using rule 45 (Operadores -> EQUALS .)
+    DO              reduce using rule 45 (Operadores -> EQUALS .)
+    NAME            reduce using rule 45 (Operadores -> EQUALS .)
+    VARIABLE        reduce using rule 45 (Operadores -> EQUALS .)
+    EXCLAMATION     reduce using rule 45 (Operadores -> EQUALS .)
+    AT              reduce using rule 45 (Operadores -> EQUALS .)
+    $end            reduce using rule 45 (Operadores -> EQUALS .)
+    ELSE            reduce using rule 45 (Operadores -> EQUALS .)
+    THEN            reduce using rule 45 (Operadores -> EQUALS .)
+    LOOP            reduce using rule 45 (Operadores -> EQUALS .)
+    SEMICOLON       reduce using rule 45 (Operadores -> EQUALS .)
+
+
+state 23
+
+    (30) Declaracao -> DeclaracaoF .
+
+    DEFINED_WORD    reduce using rule 30 (Declaracao -> DeclaracaoF .)
+    INT             reduce using rule 30 (Declaracao -> DeclaracaoF .)
+    PLUS            reduce using rule 30 (Declaracao -> DeclaracaoF .)
+    MINUS           reduce using rule 30 (Declaracao -> DeclaracaoF .)
+    TIMES           reduce using rule 30 (Declaracao -> DeclaracaoF .)
+    DIVIDE          reduce using rule 30 (Declaracao -> DeclaracaoF .)
+    MOD             reduce using rule 30 (Declaracao -> DeclaracaoF .)
+    SUPEQ           reduce using rule 30 (Declaracao -> DeclaracaoF .)
+    INFEQ           reduce using rule 30 (Declaracao -> DeclaracaoF .)
+    INFERIOR        reduce using rule 30 (Declaracao -> DeclaracaoF .)
+    SUPERIOR        reduce using rule 30 (Declaracao -> DeclaracaoF .)
+    EQUALS          reduce using rule 30 (Declaracao -> DeclaracaoF .)
+    STRING          reduce using rule 30 (Declaracao -> DeclaracaoF .)
+    EMIT            reduce using rule 30 (Declaracao -> DeclaracaoF .)
+    DOT             reduce using rule 30 (Declaracao -> DeclaracaoF .)
+    CHAR            reduce using rule 30 (Declaracao -> DeclaracaoF .)
+    SPACE           reduce using rule 30 (Declaracao -> DeclaracaoF .)
+    SPACES          reduce using rule 30 (Declaracao -> DeclaracaoF .)
+    CR              reduce using rule 30 (Declaracao -> DeclaracaoF .)
+    KEY             reduce using rule 30 (Declaracao -> DeclaracaoF .)
+    DUP             reduce using rule 30 (Declaracao -> DeclaracaoF .)
+    2DUP            reduce using rule 30 (Declaracao -> DeclaracaoF .)
+    SWAP            reduce using rule 30 (Declaracao -> DeclaracaoF .)
+    DROP            reduce using rule 30 (Declaracao -> DeclaracaoF .)
+    IF              reduce using rule 30 (Declaracao -> DeclaracaoF .)
+    DO              reduce using rule 30 (Declaracao -> DeclaracaoF .)
+    NAME            reduce using rule 30 (Declaracao -> DeclaracaoF .)
+    VARIABLE        reduce using rule 30 (Declaracao -> DeclaracaoF .)
+    EXCLAMATION     reduce using rule 30 (Declaracao -> DeclaracaoF .)
+    AT              reduce using rule 30 (Declaracao -> DeclaracaoF .)
+    $end            reduce using rule 30 (Declaracao -> DeclaracaoF .)
+    ELSE            reduce using rule 30 (Declaracao -> DeclaracaoF .)
+    THEN            reduce using rule 30 (Declaracao -> DeclaracaoF .)
+    LOOP            reduce using rule 30 (Declaracao -> DeclaracaoF .)
+    SEMICOLON       reduce using rule 30 (Declaracao -> DeclaracaoF .)
+
+
+state 24
+
+    (31) Declaracao -> DeclaracaoV .
+
+    DEFINED_WORD    reduce using rule 31 (Declaracao -> DeclaracaoV .)
+    INT             reduce using rule 31 (Declaracao -> DeclaracaoV .)
+    PLUS            reduce using rule 31 (Declaracao -> DeclaracaoV .)
+    MINUS           reduce using rule 31 (Declaracao -> DeclaracaoV .)
+    TIMES           reduce using rule 31 (Declaracao -> DeclaracaoV .)
+    DIVIDE          reduce using rule 31 (Declaracao -> DeclaracaoV .)
+    MOD             reduce using rule 31 (Declaracao -> DeclaracaoV .)
+    SUPEQ           reduce using rule 31 (Declaracao -> DeclaracaoV .)
+    INFEQ           reduce using rule 31 (Declaracao -> DeclaracaoV .)
+    INFERIOR        reduce using rule 31 (Declaracao -> DeclaracaoV .)
+    SUPERIOR        reduce using rule 31 (Declaracao -> DeclaracaoV .)
+    EQUALS          reduce using rule 31 (Declaracao -> DeclaracaoV .)
+    STRING          reduce using rule 31 (Declaracao -> DeclaracaoV .)
+    EMIT            reduce using rule 31 (Declaracao -> DeclaracaoV .)
+    DOT             reduce using rule 31 (Declaracao -> DeclaracaoV .)
+    CHAR            reduce using rule 31 (Declaracao -> DeclaracaoV .)
+    SPACE           reduce using rule 31 (Declaracao -> DeclaracaoV .)
+    SPACES          reduce using rule 31 (Declaracao -> DeclaracaoV .)
+    CR              reduce using rule 31 (Declaracao -> DeclaracaoV .)
+    KEY             reduce using rule 31 (Declaracao -> DeclaracaoV .)
+    DUP             reduce using rule 31 (Declaracao -> DeclaracaoV .)
+    2DUP            reduce using rule 31 (Declaracao -> DeclaracaoV .)
+    SWAP            reduce using rule 31 (Declaracao -> DeclaracaoV .)
+    DROP            reduce using rule 31 (Declaracao -> DeclaracaoV .)
+    IF              reduce using rule 31 (Declaracao -> DeclaracaoV .)
+    DO              reduce using rule 31 (Declaracao -> DeclaracaoV .)
+    NAME            reduce using rule 31 (Declaracao -> DeclaracaoV .)
+    VARIABLE        reduce using rule 31 (Declaracao -> DeclaracaoV .)
+    EXCLAMATION     reduce using rule 31 (Declaracao -> DeclaracaoV .)
+    AT              reduce using rule 31 (Declaracao -> DeclaracaoV .)
+    $end            reduce using rule 31 (Declaracao -> DeclaracaoV .)
+    ELSE            reduce using rule 31 (Declaracao -> DeclaracaoV .)
+    THEN            reduce using rule 31 (Declaracao -> DeclaracaoV .)
+    LOOP            reduce using rule 31 (Declaracao -> DeclaracaoV .)
+    SEMICOLON       reduce using rule 31 (Declaracao -> DeclaracaoV .)
+
+
+state 25
+
+    (22) Print -> STRING .
+
+    DEFINED_WORD    reduce using rule 22 (Print -> STRING .)
+    INT             reduce using rule 22 (Print -> STRING .)
+    PLUS            reduce using rule 22 (Print -> STRING .)
+    MINUS           reduce using rule 22 (Print -> STRING .)
+    TIMES           reduce using rule 22 (Print -> STRING .)
+    DIVIDE          reduce using rule 22 (Print -> STRING .)
+    MOD             reduce using rule 22 (Print -> STRING .)
+    SUPEQ           reduce using rule 22 (Print -> STRING .)
+    INFEQ           reduce using rule 22 (Print -> STRING .)
+    INFERIOR        reduce using rule 22 (Print -> STRING .)
+    SUPERIOR        reduce using rule 22 (Print -> STRING .)
+    EQUALS          reduce using rule 22 (Print -> STRING .)
+    STRING          reduce using rule 22 (Print -> STRING .)
+    EMIT            reduce using rule 22 (Print -> STRING .)
+    DOT             reduce using rule 22 (Print -> STRING .)
+    CHAR            reduce using rule 22 (Print -> STRING .)
+    SPACE           reduce using rule 22 (Print -> STRING .)
+    SPACES          reduce using rule 22 (Print -> STRING .)
+    CR              reduce using rule 22 (Print -> STRING .)
+    KEY             reduce using rule 22 (Print -> STRING .)
+    DUP             reduce using rule 22 (Print -> STRING .)
+    2DUP            reduce using rule 22 (Print -> STRING .)
+    SWAP            reduce using rule 22 (Print -> STRING .)
+    DROP            reduce using rule 22 (Print -> STRING .)
+    IF              reduce using rule 22 (Print -> STRING .)
+    DO              reduce using rule 22 (Print -> STRING .)
+    NAME            reduce using rule 22 (Print -> STRING .)
+    VARIABLE        reduce using rule 22 (Print -> STRING .)
+    EXCLAMATION     reduce using rule 22 (Print -> STRING .)
+    AT              reduce using rule 22 (Print -> STRING .)
+    $end            reduce using rule 22 (Print -> STRING .)
+    ELSE            reduce using rule 22 (Print -> STRING .)
+    THEN            reduce using rule 22 (Print -> STRING .)
+    LOOP            reduce using rule 22 (Print -> STRING .)
+    SEMICOLON       reduce using rule 22 (Print -> STRING .)
+
+
+state 26
+
+    (23) Print -> EMIT .
+
+    DEFINED_WORD    reduce using rule 23 (Print -> EMIT .)
+    INT             reduce using rule 23 (Print -> EMIT .)
+    PLUS            reduce using rule 23 (Print -> EMIT .)
+    MINUS           reduce using rule 23 (Print -> EMIT .)
+    TIMES           reduce using rule 23 (Print -> EMIT .)
+    DIVIDE          reduce using rule 23 (Print -> EMIT .)
+    MOD             reduce using rule 23 (Print -> EMIT .)
+    SUPEQ           reduce using rule 23 (Print -> EMIT .)
+    INFEQ           reduce using rule 23 (Print -> EMIT .)
+    INFERIOR        reduce using rule 23 (Print -> EMIT .)
+    SUPERIOR        reduce using rule 23 (Print -> EMIT .)
+    EQUALS          reduce using rule 23 (Print -> EMIT .)
+    STRING          reduce using rule 23 (Print -> EMIT .)
+    EMIT            reduce using rule 23 (Print -> EMIT .)
+    DOT             reduce using rule 23 (Print -> EMIT .)
+    CHAR            reduce using rule 23 (Print -> EMIT .)
+    SPACE           reduce using rule 23 (Print -> EMIT .)
+    SPACES          reduce using rule 23 (Print -> EMIT .)
+    CR              reduce using rule 23 (Print -> EMIT .)
+    KEY             reduce using rule 23 (Print -> EMIT .)
+    DUP             reduce using rule 23 (Print -> EMIT .)
+    2DUP            reduce using rule 23 (Print -> EMIT .)
+    SWAP            reduce using rule 23 (Print -> EMIT .)
+    DROP            reduce using rule 23 (Print -> EMIT .)
+    IF              reduce using rule 23 (Print -> EMIT .)
+    DO              reduce using rule 23 (Print -> EMIT .)
+    NAME            reduce using rule 23 (Print -> EMIT .)
+    VARIABLE        reduce using rule 23 (Print -> EMIT .)
+    EXCLAMATION     reduce using rule 23 (Print -> EMIT .)
+    AT              reduce using rule 23 (Print -> EMIT .)
+    $end            reduce using rule 23 (Print -> EMIT .)
+    ELSE            reduce using rule 23 (Print -> EMIT .)
+    THEN            reduce using rule 23 (Print -> EMIT .)
+    LOOP            reduce using rule 23 (Print -> EMIT .)
+    SEMICOLON       reduce using rule 23 (Print -> EMIT .)
+
+
+state 27
+
+    (24) Print -> DOT .
+
+    DEFINED_WORD    reduce using rule 24 (Print -> DOT .)
+    INT             reduce using rule 24 (Print -> DOT .)
+    PLUS            reduce using rule 24 (Print -> DOT .)
+    MINUS           reduce using rule 24 (Print -> DOT .)
+    TIMES           reduce using rule 24 (Print -> DOT .)
+    DIVIDE          reduce using rule 24 (Print -> DOT .)
+    MOD             reduce using rule 24 (Print -> DOT .)
+    SUPEQ           reduce using rule 24 (Print -> DOT .)
+    INFEQ           reduce using rule 24 (Print -> DOT .)
+    INFERIOR        reduce using rule 24 (Print -> DOT .)
+    SUPERIOR        reduce using rule 24 (Print -> DOT .)
+    EQUALS          reduce using rule 24 (Print -> DOT .)
+    STRING          reduce using rule 24 (Print -> DOT .)
+    EMIT            reduce using rule 24 (Print -> DOT .)
+    DOT             reduce using rule 24 (Print -> DOT .)
+    CHAR            reduce using rule 24 (Print -> DOT .)
+    SPACE           reduce using rule 24 (Print -> DOT .)
+    SPACES          reduce using rule 24 (Print -> DOT .)
+    CR              reduce using rule 24 (Print -> DOT .)
+    KEY             reduce using rule 24 (Print -> DOT .)
+    DUP             reduce using rule 24 (Print -> DOT .)
+    2DUP            reduce using rule 24 (Print -> DOT .)
+    SWAP            reduce using rule 24 (Print -> DOT .)
+    DROP            reduce using rule 24 (Print -> DOT .)
+    IF              reduce using rule 24 (Print -> DOT .)
+    DO              reduce using rule 24 (Print -> DOT .)
+    NAME            reduce using rule 24 (Print -> DOT .)
+    VARIABLE        reduce using rule 24 (Print -> DOT .)
+    EXCLAMATION     reduce using rule 24 (Print -> DOT .)
+    AT              reduce using rule 24 (Print -> DOT .)
+    $end            reduce using rule 24 (Print -> DOT .)
+    ELSE            reduce using rule 24 (Print -> DOT .)
+    THEN            reduce using rule 24 (Print -> DOT .)
+    LOOP            reduce using rule 24 (Print -> DOT .)
+    SEMICOLON       reduce using rule 24 (Print -> DOT .)
+
+
+state 28
+
+    (25) Print -> CHAR .
+
+    DEFINED_WORD    reduce using rule 25 (Print -> CHAR .)
+    INT             reduce using rule 25 (Print -> CHAR .)
+    PLUS            reduce using rule 25 (Print -> CHAR .)
+    MINUS           reduce using rule 25 (Print -> CHAR .)
+    TIMES           reduce using rule 25 (Print -> CHAR .)
+    DIVIDE          reduce using rule 25 (Print -> CHAR .)
+    MOD             reduce using rule 25 (Print -> CHAR .)
+    SUPEQ           reduce using rule 25 (Print -> CHAR .)
+    INFEQ           reduce using rule 25 (Print -> CHAR .)
+    INFERIOR        reduce using rule 25 (Print -> CHAR .)
+    SUPERIOR        reduce using rule 25 (Print -> CHAR .)
+    EQUALS          reduce using rule 25 (Print -> CHAR .)
+    STRING          reduce using rule 25 (Print -> CHAR .)
+    EMIT            reduce using rule 25 (Print -> CHAR .)
+    DOT             reduce using rule 25 (Print -> CHAR .)
+    CHAR            reduce using rule 25 (Print -> CHAR .)
+    SPACE           reduce using rule 25 (Print -> CHAR .)
+    SPACES          reduce using rule 25 (Print -> CHAR .)
+    CR              reduce using rule 25 (Print -> CHAR .)
+    KEY             reduce using rule 25 (Print -> CHAR .)
+    DUP             reduce using rule 25 (Print -> CHAR .)
+    2DUP            reduce using rule 25 (Print -> CHAR .)
+    SWAP            reduce using rule 25 (Print -> CHAR .)
+    DROP            reduce using rule 25 (Print -> CHAR .)
+    IF              reduce using rule 25 (Print -> CHAR .)
+    DO              reduce using rule 25 (Print -> CHAR .)
+    NAME            reduce using rule 25 (Print -> CHAR .)
+    VARIABLE        reduce using rule 25 (Print -> CHAR .)
+    EXCLAMATION     reduce using rule 25 (Print -> CHAR .)
+    AT              reduce using rule 25 (Print -> CHAR .)
+    $end            reduce using rule 25 (Print -> CHAR .)
+    ELSE            reduce using rule 25 (Print -> CHAR .)
+    THEN            reduce using rule 25 (Print -> CHAR .)
+    LOOP            reduce using rule 25 (Print -> CHAR .)
+    SEMICOLON       reduce using rule 25 (Print -> CHAR .)
+
+
+state 29
+
+    (26) Print -> SPACE .
+
+    DEFINED_WORD    reduce using rule 26 (Print -> SPACE .)
+    INT             reduce using rule 26 (Print -> SPACE .)
+    PLUS            reduce using rule 26 (Print -> SPACE .)
+    MINUS           reduce using rule 26 (Print -> SPACE .)
+    TIMES           reduce using rule 26 (Print -> SPACE .)
+    DIVIDE          reduce using rule 26 (Print -> SPACE .)
+    MOD             reduce using rule 26 (Print -> SPACE .)
+    SUPEQ           reduce using rule 26 (Print -> SPACE .)
+    INFEQ           reduce using rule 26 (Print -> SPACE .)
+    INFERIOR        reduce using rule 26 (Print -> SPACE .)
+    SUPERIOR        reduce using rule 26 (Print -> SPACE .)
+    EQUALS          reduce using rule 26 (Print -> SPACE .)
+    STRING          reduce using rule 26 (Print -> SPACE .)
+    EMIT            reduce using rule 26 (Print -> SPACE .)
+    DOT             reduce using rule 26 (Print -> SPACE .)
+    CHAR            reduce using rule 26 (Print -> SPACE .)
+    SPACE           reduce using rule 26 (Print -> SPACE .)
+    SPACES          reduce using rule 26 (Print -> SPACE .)
+    CR              reduce using rule 26 (Print -> SPACE .)
+    KEY             reduce using rule 26 (Print -> SPACE .)
+    DUP             reduce using rule 26 (Print -> SPACE .)
+    2DUP            reduce using rule 26 (Print -> SPACE .)
+    SWAP            reduce using rule 26 (Print -> SPACE .)
+    DROP            reduce using rule 26 (Print -> SPACE .)
+    IF              reduce using rule 26 (Print -> SPACE .)
+    DO              reduce using rule 26 (Print -> SPACE .)
+    NAME            reduce using rule 26 (Print -> SPACE .)
+    VARIABLE        reduce using rule 26 (Print -> SPACE .)
+    EXCLAMATION     reduce using rule 26 (Print -> SPACE .)
+    AT              reduce using rule 26 (Print -> SPACE .)
+    $end            reduce using rule 26 (Print -> SPACE .)
+    ELSE            reduce using rule 26 (Print -> SPACE .)
+    THEN            reduce using rule 26 (Print -> SPACE .)
+    LOOP            reduce using rule 26 (Print -> SPACE .)
+    SEMICOLON       reduce using rule 26 (Print -> SPACE .)
+
+
+state 30
+
+    (27) Print -> SPACES .
+
+    DEFINED_WORD    reduce using rule 27 (Print -> SPACES .)
+    INT             reduce using rule 27 (Print -> SPACES .)
+    PLUS            reduce using rule 27 (Print -> SPACES .)
+    MINUS           reduce using rule 27 (Print -> SPACES .)
+    TIMES           reduce using rule 27 (Print -> SPACES .)
+    DIVIDE          reduce using rule 27 (Print -> SPACES .)
+    MOD             reduce using rule 27 (Print -> SPACES .)
+    SUPEQ           reduce using rule 27 (Print -> SPACES .)
+    INFEQ           reduce using rule 27 (Print -> SPACES .)
+    INFERIOR        reduce using rule 27 (Print -> SPACES .)
+    SUPERIOR        reduce using rule 27 (Print -> SPACES .)
+    EQUALS          reduce using rule 27 (Print -> SPACES .)
+    STRING          reduce using rule 27 (Print -> SPACES .)
+    EMIT            reduce using rule 27 (Print -> SPACES .)
+    DOT             reduce using rule 27 (Print -> SPACES .)
+    CHAR            reduce using rule 27 (Print -> SPACES .)
+    SPACE           reduce using rule 27 (Print -> SPACES .)
+    SPACES          reduce using rule 27 (Print -> SPACES .)
+    CR              reduce using rule 27 (Print -> SPACES .)
+    KEY             reduce using rule 27 (Print -> SPACES .)
+    DUP             reduce using rule 27 (Print -> SPACES .)
+    2DUP            reduce using rule 27 (Print -> SPACES .)
+    SWAP            reduce using rule 27 (Print -> SPACES .)
+    DROP            reduce using rule 27 (Print -> SPACES .)
+    IF              reduce using rule 27 (Print -> SPACES .)
+    DO              reduce using rule 27 (Print -> SPACES .)
+    NAME            reduce using rule 27 (Print -> SPACES .)
+    VARIABLE        reduce using rule 27 (Print -> SPACES .)
+    EXCLAMATION     reduce using rule 27 (Print -> SPACES .)
+    AT              reduce using rule 27 (Print -> SPACES .)
+    $end            reduce using rule 27 (Print -> SPACES .)
+    ELSE            reduce using rule 27 (Print -> SPACES .)
+    THEN            reduce using rule 27 (Print -> SPACES .)
+    LOOP            reduce using rule 27 (Print -> SPACES .)
+    SEMICOLON       reduce using rule 27 (Print -> SPACES .)
+
+
+state 31
+
+    (28) Print -> CR .
+
+    DEFINED_WORD    reduce using rule 28 (Print -> CR .)
+    INT             reduce using rule 28 (Print -> CR .)
+    PLUS            reduce using rule 28 (Print -> CR .)
+    MINUS           reduce using rule 28 (Print -> CR .)
+    TIMES           reduce using rule 28 (Print -> CR .)
+    DIVIDE          reduce using rule 28 (Print -> CR .)
+    MOD             reduce using rule 28 (Print -> CR .)
+    SUPEQ           reduce using rule 28 (Print -> CR .)
+    INFEQ           reduce using rule 28 (Print -> CR .)
+    INFERIOR        reduce using rule 28 (Print -> CR .)
+    SUPERIOR        reduce using rule 28 (Print -> CR .)
+    EQUALS          reduce using rule 28 (Print -> CR .)
+    STRING          reduce using rule 28 (Print -> CR .)
+    EMIT            reduce using rule 28 (Print -> CR .)
+    DOT             reduce using rule 28 (Print -> CR .)
+    CHAR            reduce using rule 28 (Print -> CR .)
+    SPACE           reduce using rule 28 (Print -> CR .)
+    SPACES          reduce using rule 28 (Print -> CR .)
+    CR              reduce using rule 28 (Print -> CR .)
+    KEY             reduce using rule 28 (Print -> CR .)
+    DUP             reduce using rule 28 (Print -> CR .)
+    2DUP            reduce using rule 28 (Print -> CR .)
+    SWAP            reduce using rule 28 (Print -> CR .)
+    DROP            reduce using rule 28 (Print -> CR .)
+    IF              reduce using rule 28 (Print -> CR .)
+    DO              reduce using rule 28 (Print -> CR .)
+    NAME            reduce using rule 28 (Print -> CR .)
+    VARIABLE        reduce using rule 28 (Print -> CR .)
+    EXCLAMATION     reduce using rule 28 (Print -> CR .)
+    AT              reduce using rule 28 (Print -> CR .)
+    $end            reduce using rule 28 (Print -> CR .)
+    ELSE            reduce using rule 28 (Print -> CR .)
+    THEN            reduce using rule 28 (Print -> CR .)
+    LOOP            reduce using rule 28 (Print -> CR .)
+    SEMICOLON       reduce using rule 28 (Print -> CR .)
+
+
+state 32
+
+    (17) Operacao -> KEY .
+
+    DEFINED_WORD    reduce using rule 17 (Operacao -> KEY .)
+    INT             reduce using rule 17 (Operacao -> KEY .)
+    PLUS            reduce using rule 17 (Operacao -> KEY .)
+    MINUS           reduce using rule 17 (Operacao -> KEY .)
+    TIMES           reduce using rule 17 (Operacao -> KEY .)
+    DIVIDE          reduce using rule 17 (Operacao -> KEY .)
+    MOD             reduce using rule 17 (Operacao -> KEY .)
+    SUPEQ           reduce using rule 17 (Operacao -> KEY .)
+    INFEQ           reduce using rule 17 (Operacao -> KEY .)
+    INFERIOR        reduce using rule 17 (Operacao -> KEY .)
+    SUPERIOR        reduce using rule 17 (Operacao -> KEY .)
+    EQUALS          reduce using rule 17 (Operacao -> KEY .)
+    STRING          reduce using rule 17 (Operacao -> KEY .)
+    EMIT            reduce using rule 17 (Operacao -> KEY .)
+    DOT             reduce using rule 17 (Operacao -> KEY .)
+    CHAR            reduce using rule 17 (Operacao -> KEY .)
+    SPACE           reduce using rule 17 (Operacao -> KEY .)
+    SPACES          reduce using rule 17 (Operacao -> KEY .)
+    CR              reduce using rule 17 (Operacao -> KEY .)
+    KEY             reduce using rule 17 (Operacao -> KEY .)
+    DUP             reduce using rule 17 (Operacao -> KEY .)
+    2DUP            reduce using rule 17 (Operacao -> KEY .)
+    SWAP            reduce using rule 17 (Operacao -> KEY .)
+    DROP            reduce using rule 17 (Operacao -> KEY .)
+    IF              reduce using rule 17 (Operacao -> KEY .)
+    DO              reduce using rule 17 (Operacao -> KEY .)
+    NAME            reduce using rule 17 (Operacao -> KEY .)
+    VARIABLE        reduce using rule 17 (Operacao -> KEY .)
+    EXCLAMATION     reduce using rule 17 (Operacao -> KEY .)
+    AT              reduce using rule 17 (Operacao -> KEY .)
+    $end            reduce using rule 17 (Operacao -> KEY .)
+    ELSE            reduce using rule 17 (Operacao -> KEY .)
+    THEN            reduce using rule 17 (Operacao -> KEY .)
+    LOOP            reduce using rule 17 (Operacao -> KEY .)
+    SEMICOLON       reduce using rule 17 (Operacao -> KEY .)
+
+
+state 33
+
+    (18) Operacao -> DUP .
+
+    DEFINED_WORD    reduce using rule 18 (Operacao -> DUP .)
+    INT             reduce using rule 18 (Operacao -> DUP .)
+    PLUS            reduce using rule 18 (Operacao -> DUP .)
+    MINUS           reduce using rule 18 (Operacao -> DUP .)
+    TIMES           reduce using rule 18 (Operacao -> DUP .)
+    DIVIDE          reduce using rule 18 (Operacao -> DUP .)
+    MOD             reduce using rule 18 (Operacao -> DUP .)
+    SUPEQ           reduce using rule 18 (Operacao -> DUP .)
+    INFEQ           reduce using rule 18 (Operacao -> DUP .)
+    INFERIOR        reduce using rule 18 (Operacao -> DUP .)
+    SUPERIOR        reduce using rule 18 (Operacao -> DUP .)
+    EQUALS          reduce using rule 18 (Operacao -> DUP .)
+    STRING          reduce using rule 18 (Operacao -> DUP .)
+    EMIT            reduce using rule 18 (Operacao -> DUP .)
+    DOT             reduce using rule 18 (Operacao -> DUP .)
+    CHAR            reduce using rule 18 (Operacao -> DUP .)
+    SPACE           reduce using rule 18 (Operacao -> DUP .)
+    SPACES          reduce using rule 18 (Operacao -> DUP .)
+    CR              reduce using rule 18 (Operacao -> DUP .)
+    KEY             reduce using rule 18 (Operacao -> DUP .)
+    DUP             reduce using rule 18 (Operacao -> DUP .)
+    2DUP            reduce using rule 18 (Operacao -> DUP .)
+    SWAP            reduce using rule 18 (Operacao -> DUP .)
+    DROP            reduce using rule 18 (Operacao -> DUP .)
+    IF              reduce using rule 18 (Operacao -> DUP .)
+    DO              reduce using rule 18 (Operacao -> DUP .)
+    NAME            reduce using rule 18 (Operacao -> DUP .)
+    VARIABLE        reduce using rule 18 (Operacao -> DUP .)
+    EXCLAMATION     reduce using rule 18 (Operacao -> DUP .)
+    AT              reduce using rule 18 (Operacao -> DUP .)
+    $end            reduce using rule 18 (Operacao -> DUP .)
+    ELSE            reduce using rule 18 (Operacao -> DUP .)
+    THEN            reduce using rule 18 (Operacao -> DUP .)
+    LOOP            reduce using rule 18 (Operacao -> DUP .)
+    SEMICOLON       reduce using rule 18 (Operacao -> DUP .)
+
+
+state 34
+
+    (19) Operacao -> 2DUP .
+
+    DEFINED_WORD    reduce using rule 19 (Operacao -> 2DUP .)
+    INT             reduce using rule 19 (Operacao -> 2DUP .)
+    PLUS            reduce using rule 19 (Operacao -> 2DUP .)
+    MINUS           reduce using rule 19 (Operacao -> 2DUP .)
+    TIMES           reduce using rule 19 (Operacao -> 2DUP .)
+    DIVIDE          reduce using rule 19 (Operacao -> 2DUP .)
+    MOD             reduce using rule 19 (Operacao -> 2DUP .)
+    SUPEQ           reduce using rule 19 (Operacao -> 2DUP .)
+    INFEQ           reduce using rule 19 (Operacao -> 2DUP .)
+    INFERIOR        reduce using rule 19 (Operacao -> 2DUP .)
+    SUPERIOR        reduce using rule 19 (Operacao -> 2DUP .)
+    EQUALS          reduce using rule 19 (Operacao -> 2DUP .)
+    STRING          reduce using rule 19 (Operacao -> 2DUP .)
+    EMIT            reduce using rule 19 (Operacao -> 2DUP .)
+    DOT             reduce using rule 19 (Operacao -> 2DUP .)
+    CHAR            reduce using rule 19 (Operacao -> 2DUP .)
+    SPACE           reduce using rule 19 (Operacao -> 2DUP .)
+    SPACES          reduce using rule 19 (Operacao -> 2DUP .)
+    CR              reduce using rule 19 (Operacao -> 2DUP .)
+    KEY             reduce using rule 19 (Operacao -> 2DUP .)
+    DUP             reduce using rule 19 (Operacao -> 2DUP .)
+    2DUP            reduce using rule 19 (Operacao -> 2DUP .)
+    SWAP            reduce using rule 19 (Operacao -> 2DUP .)
+    DROP            reduce using rule 19 (Operacao -> 2DUP .)
+    IF              reduce using rule 19 (Operacao -> 2DUP .)
+    DO              reduce using rule 19 (Operacao -> 2DUP .)
+    NAME            reduce using rule 19 (Operacao -> 2DUP .)
+    VARIABLE        reduce using rule 19 (Operacao -> 2DUP .)
+    EXCLAMATION     reduce using rule 19 (Operacao -> 2DUP .)
+    AT              reduce using rule 19 (Operacao -> 2DUP .)
+    $end            reduce using rule 19 (Operacao -> 2DUP .)
+    ELSE            reduce using rule 19 (Operacao -> 2DUP .)
+    THEN            reduce using rule 19 (Operacao -> 2DUP .)
+    LOOP            reduce using rule 19 (Operacao -> 2DUP .)
+    SEMICOLON       reduce using rule 19 (Operacao -> 2DUP .)
+
+
+state 35
+
+    (20) Operacao -> SWAP .
+
+    DEFINED_WORD    reduce using rule 20 (Operacao -> SWAP .)
+    INT             reduce using rule 20 (Operacao -> SWAP .)
+    PLUS            reduce using rule 20 (Operacao -> SWAP .)
+    MINUS           reduce using rule 20 (Operacao -> SWAP .)
+    TIMES           reduce using rule 20 (Operacao -> SWAP .)
+    DIVIDE          reduce using rule 20 (Operacao -> SWAP .)
+    MOD             reduce using rule 20 (Operacao -> SWAP .)
+    SUPEQ           reduce using rule 20 (Operacao -> SWAP .)
+    INFEQ           reduce using rule 20 (Operacao -> SWAP .)
+    INFERIOR        reduce using rule 20 (Operacao -> SWAP .)
+    SUPERIOR        reduce using rule 20 (Operacao -> SWAP .)
+    EQUALS          reduce using rule 20 (Operacao -> SWAP .)
+    STRING          reduce using rule 20 (Operacao -> SWAP .)
+    EMIT            reduce using rule 20 (Operacao -> SWAP .)
+    DOT             reduce using rule 20 (Operacao -> SWAP .)
+    CHAR            reduce using rule 20 (Operacao -> SWAP .)
+    SPACE           reduce using rule 20 (Operacao -> SWAP .)
+    SPACES          reduce using rule 20 (Operacao -> SWAP .)
+    CR              reduce using rule 20 (Operacao -> SWAP .)
+    KEY             reduce using rule 20 (Operacao -> SWAP .)
+    DUP             reduce using rule 20 (Operacao -> SWAP .)
+    2DUP            reduce using rule 20 (Operacao -> SWAP .)
+    SWAP            reduce using rule 20 (Operacao -> SWAP .)
+    DROP            reduce using rule 20 (Operacao -> SWAP .)
+    IF              reduce using rule 20 (Operacao -> SWAP .)
+    DO              reduce using rule 20 (Operacao -> SWAP .)
+    NAME            reduce using rule 20 (Operacao -> SWAP .)
+    VARIABLE        reduce using rule 20 (Operacao -> SWAP .)
+    EXCLAMATION     reduce using rule 20 (Operacao -> SWAP .)
+    AT              reduce using rule 20 (Operacao -> SWAP .)
+    $end            reduce using rule 20 (Operacao -> SWAP .)
+    ELSE            reduce using rule 20 (Operacao -> SWAP .)
+    THEN            reduce using rule 20 (Operacao -> SWAP .)
+    LOOP            reduce using rule 20 (Operacao -> SWAP .)
+    SEMICOLON       reduce using rule 20 (Operacao -> SWAP .)
+
+
+state 36
+
+    (21) Operacao -> DROP .
+
+    DEFINED_WORD    reduce using rule 21 (Operacao -> DROP .)
+    INT             reduce using rule 21 (Operacao -> DROP .)
+    PLUS            reduce using rule 21 (Operacao -> DROP .)
+    MINUS           reduce using rule 21 (Operacao -> DROP .)
+    TIMES           reduce using rule 21 (Operacao -> DROP .)
+    DIVIDE          reduce using rule 21 (Operacao -> DROP .)
+    MOD             reduce using rule 21 (Operacao -> DROP .)
+    SUPEQ           reduce using rule 21 (Operacao -> DROP .)
+    INFEQ           reduce using rule 21 (Operacao -> DROP .)
+    INFERIOR        reduce using rule 21 (Operacao -> DROP .)
+    SUPERIOR        reduce using rule 21 (Operacao -> DROP .)
+    EQUALS          reduce using rule 21 (Operacao -> DROP .)
+    STRING          reduce using rule 21 (Operacao -> DROP .)
+    EMIT            reduce using rule 21 (Operacao -> DROP .)
+    DOT             reduce using rule 21 (Operacao -> DROP .)
+    CHAR            reduce using rule 21 (Operacao -> DROP .)
+    SPACE           reduce using rule 21 (Operacao -> DROP .)
+    SPACES          reduce using rule 21 (Operacao -> DROP .)
+    CR              reduce using rule 21 (Operacao -> DROP .)
+    KEY             reduce using rule 21 (Operacao -> DROP .)
+    DUP             reduce using rule 21 (Operacao -> DROP .)
+    2DUP            reduce using rule 21 (Operacao -> DROP .)
+    SWAP            reduce using rule 21 (Operacao -> DROP .)
+    DROP            reduce using rule 21 (Operacao -> DROP .)
+    IF              reduce using rule 21 (Operacao -> DROP .)
+    DO              reduce using rule 21 (Operacao -> DROP .)
+    NAME            reduce using rule 21 (Operacao -> DROP .)
+    VARIABLE        reduce using rule 21 (Operacao -> DROP .)
+    EXCLAMATION     reduce using rule 21 (Operacao -> DROP .)
+    AT              reduce using rule 21 (Operacao -> DROP .)
+    $end            reduce using rule 21 (Operacao -> DROP .)
+    ELSE            reduce using rule 21 (Operacao -> DROP .)
+    THEN            reduce using rule 21 (Operacao -> DROP .)
+    LOOP            reduce using rule 21 (Operacao -> DROP .)
+    SEMICOLON       reduce using rule 21 (Operacao -> DROP .)
+
+
+state 37
+
+    (12) Condicional -> IF . Comandos ELSE Comandos THEN
+    (13) Condicional -> IF . Comandos ELSE THEN
+    (14) Condicional -> IF . Comandos THEN
+    (15) Condicional -> IF . THEN
+    (2) Comandos -> . Comando Comandos
+    (3) Comandos -> . Comando
+    (4) Comando -> . Valores
+    (5) Comando -> . Operadores
+    (6) Comando -> . Declaracao
+    (7) Comando -> . Print
+    (8) Comando -> . Operacao
+    (9) Comando -> . Condicional
+    (10) Comando -> . Ciclo
+    (11) Comando -> . DEFINED_WORD
+    (29) Valores -> . INT
+    (36) Operadores -> . PLUS
+    (37) Operadores -> . MINUS
+    (38) Operadores -> . TIMES
+    (39) Operadores -> . DIVIDE
+    (40) Operadores -> . MOD
+    (41) Operadores -> . SUPEQ
+    (42) Operadores -> . INFEQ
+    (43) Operadores -> . INFERIOR
+    (44) Operadores -> . SUPERIOR
+    (45) Operadores -> . EQUALS
+    (30) Declaracao -> . DeclaracaoF
+    (31) Declaracao -> . DeclaracaoV
+    (22) Print -> . STRING
+    (23) Print -> . EMIT
+    (24) Print -> . DOT
+    (25) Print -> . CHAR
+    (26) Print -> . SPACE
+    (27) Print -> . SPACES
+    (28) Print -> . CR
+    (17) Operacao -> . KEY
+    (18) Operacao -> . DUP
+    (19) Operacao -> . 2DUP
+    (20) Operacao -> . SWAP
+    (21) Operacao -> . DROP
+    (12) Condicional -> . IF Comandos ELSE Comandos THEN
+    (13) Condicional -> . IF Comandos ELSE THEN
+    (14) Condicional -> . IF Comandos THEN
+    (15) Condicional -> . IF THEN
+    (16) Ciclo -> . DO Comandos LOOP
+    (32) DeclaracaoF -> . NAME Comandos SEMICOLON
+    (33) DeclaracaoV -> . VARIABLE
+    (34) DeclaracaoV -> . EXCLAMATION
+    (35) DeclaracaoV -> . AT
+
+    THEN            shift and go to state 45
+    DEFINED_WORD    shift and go to state 11
+    INT             shift and go to state 12
+    PLUS            shift and go to state 13
+    MINUS           shift and go to state 14
+    TIMES           shift and go to state 15
+    DIVIDE          shift and go to state 16
+    MOD             shift and go to state 17
+    SUPEQ           shift and go to state 18
+    INFEQ           shift and go to state 19
+    INFERIOR        shift and go to state 20
+    SUPERIOR        shift and go to state 21
+    EQUALS          shift and go to state 22
+    STRING          shift and go to state 25
+    EMIT            shift and go to state 26
+    DOT             shift and go to state 27
+    CHAR            shift and go to state 28
+    SPACE           shift and go to state 29
+    SPACES          shift and go to state 30
+    CR              shift and go to state 31
+    KEY             shift and go to state 32
+    DUP             shift and go to state 33
+    2DUP            shift and go to state 34
+    SWAP            shift and go to state 35
+    DROP            shift and go to state 36
+    IF              shift and go to state 37
+    DO              shift and go to state 38
+    NAME            shift and go to state 39
+    VARIABLE        shift and go to state 40
+    EXCLAMATION     shift and go to state 41
+    AT              shift and go to state 42
+
+    Comandos                       shift and go to state 44
+    Comando                        shift and go to state 3
+    Valores                        shift and go to state 4
+    Operadores                     shift and go to state 5
+    Declaracao                     shift and go to state 6
+    Print                          shift and go to state 7
+    Operacao                       shift and go to state 8
+    Condicional                    shift and go to state 9
+    Ciclo                          shift and go to state 10
+    DeclaracaoF                    shift and go to state 23
+    DeclaracaoV                    shift and go to state 24
+
+state 38
+
+    (16) Ciclo -> DO . Comandos LOOP
+    (2) Comandos -> . Comando Comandos
+    (3) Comandos -> . Comando
+    (4) Comando -> . Valores
+    (5) Comando -> . Operadores
+    (6) Comando -> . Declaracao
+    (7) Comando -> . Print
+    (8) Comando -> . Operacao
+    (9) Comando -> . Condicional
+    (10) Comando -> . Ciclo
+    (11) Comando -> . DEFINED_WORD
+    (29) Valores -> . INT
+    (36) Operadores -> . PLUS
+    (37) Operadores -> . MINUS
+    (38) Operadores -> . TIMES
+    (39) Operadores -> . DIVIDE
+    (40) Operadores -> . MOD
+    (41) Operadores -> . SUPEQ
+    (42) Operadores -> . INFEQ
+    (43) Operadores -> . INFERIOR
+    (44) Operadores -> . SUPERIOR
+    (45) Operadores -> . EQUALS
+    (30) Declaracao -> . DeclaracaoF
+    (31) Declaracao -> . DeclaracaoV
+    (22) Print -> . STRING
+    (23) Print -> . EMIT
+    (24) Print -> . DOT
+    (25) Print -> . CHAR
+    (26) Print -> . SPACE
+    (27) Print -> . SPACES
+    (28) Print -> . CR
+    (17) Operacao -> . KEY
+    (18) Operacao -> . DUP
+    (19) Operacao -> . 2DUP
+    (20) Operacao -> . SWAP
+    (21) Operacao -> . DROP
+    (12) Condicional -> . IF Comandos ELSE Comandos THEN
+    (13) Condicional -> . IF Comandos ELSE THEN
+    (14) Condicional -> . IF Comandos THEN
+    (15) Condicional -> . IF THEN
+    (16) Ciclo -> . DO Comandos LOOP
+    (32) DeclaracaoF -> . NAME Comandos SEMICOLON
+    (33) DeclaracaoV -> . VARIABLE
+    (34) DeclaracaoV -> . EXCLAMATION
+    (35) DeclaracaoV -> . AT
+
+    DEFINED_WORD    shift and go to state 11
+    INT             shift and go to state 12
+    PLUS            shift and go to state 13
+    MINUS           shift and go to state 14
+    TIMES           shift and go to state 15
+    DIVIDE          shift and go to state 16
+    MOD             shift and go to state 17
+    SUPEQ           shift and go to state 18
+    INFEQ           shift and go to state 19
+    INFERIOR        shift and go to state 20
+    SUPERIOR        shift and go to state 21
+    EQUALS          shift and go to state 22
+    STRING          shift and go to state 25
+    EMIT            shift and go to state 26
+    DOT             shift and go to state 27
+    CHAR            shift and go to state 28
+    SPACE           shift and go to state 29
+    SPACES          shift and go to state 30
+    CR              shift and go to state 31
+    KEY             shift and go to state 32
+    DUP             shift and go to state 33
+    2DUP            shift and go to state 34
+    SWAP            shift and go to state 35
+    DROP            shift and go to state 36
+    IF              shift and go to state 37
+    DO              shift and go to state 38
+    NAME            shift and go to state 39
+    VARIABLE        shift and go to state 40
+    EXCLAMATION     shift and go to state 41
+    AT              shift and go to state 42
+
+    Comandos                       shift and go to state 46
+    Comando                        shift and go to state 3
+    Valores                        shift and go to state 4
+    Operadores                     shift and go to state 5
+    Declaracao                     shift and go to state 6
+    Print                          shift and go to state 7
+    Operacao                       shift and go to state 8
+    Condicional                    shift and go to state 9
+    Ciclo                          shift and go to state 10
+    DeclaracaoF                    shift and go to state 23
+    DeclaracaoV                    shift and go to state 24
+
+state 39
+
+    (32) DeclaracaoF -> NAME . Comandos SEMICOLON
+    (2) Comandos -> . Comando Comandos
+    (3) Comandos -> . Comando
+    (4) Comando -> . Valores
+    (5) Comando -> . Operadores
+    (6) Comando -> . Declaracao
+    (7) Comando -> . Print
+    (8) Comando -> . Operacao
+    (9) Comando -> . Condicional
+    (10) Comando -> . Ciclo
+    (11) Comando -> . DEFINED_WORD
+    (29) Valores -> . INT
+    (36) Operadores -> . PLUS
+    (37) Operadores -> . MINUS
+    (38) Operadores -> . TIMES
+    (39) Operadores -> . DIVIDE
+    (40) Operadores -> . MOD
+    (41) Operadores -> . SUPEQ
+    (42) Operadores -> . INFEQ
+    (43) Operadores -> . INFERIOR
+    (44) Operadores -> . SUPERIOR
+    (45) Operadores -> . EQUALS
+    (30) Declaracao -> . DeclaracaoF
+    (31) Declaracao -> . DeclaracaoV
+    (22) Print -> . STRING
+    (23) Print -> . EMIT
+    (24) Print -> . DOT
+    (25) Print -> . CHAR
+    (26) Print -> . SPACE
+    (27) Print -> . SPACES
+    (28) Print -> . CR
+    (17) Operacao -> . KEY
+    (18) Operacao -> . DUP
+    (19) Operacao -> . 2DUP
+    (20) Operacao -> . SWAP
+    (21) Operacao -> . DROP
+    (12) Condicional -> . IF Comandos ELSE Comandos THEN
+    (13) Condicional -> . IF Comandos ELSE THEN
+    (14) Condicional -> . IF Comandos THEN
+    (15) Condicional -> . IF THEN
+    (16) Ciclo -> . DO Comandos LOOP
+    (32) DeclaracaoF -> . NAME Comandos SEMICOLON
+    (33) DeclaracaoV -> . VARIABLE
+    (34) DeclaracaoV -> . EXCLAMATION
+    (35) DeclaracaoV -> . AT
+
+    DEFINED_WORD    shift and go to state 11
+    INT             shift and go to state 12
+    PLUS            shift and go to state 13
+    MINUS           shift and go to state 14
+    TIMES           shift and go to state 15
+    DIVIDE          shift and go to state 16
+    MOD             shift and go to state 17
+    SUPEQ           shift and go to state 18
+    INFEQ           shift and go to state 19
+    INFERIOR        shift and go to state 20
+    SUPERIOR        shift and go to state 21
+    EQUALS          shift and go to state 22
+    STRING          shift and go to state 25
+    EMIT            shift and go to state 26
+    DOT             shift and go to state 27
+    CHAR            shift and go to state 28
+    SPACE           shift and go to state 29
+    SPACES          shift and go to state 30
+    CR              shift and go to state 31
+    KEY             shift and go to state 32
+    DUP             shift and go to state 33
+    2DUP            shift and go to state 34
+    SWAP            shift and go to state 35
+    DROP            shift and go to state 36
+    IF              shift and go to state 37
+    DO              shift and go to state 38
+    NAME            shift and go to state 39
+    VARIABLE        shift and go to state 40
+    EXCLAMATION     shift and go to state 41
+    AT              shift and go to state 42
+
+    Comandos                       shift and go to state 47
+    Comando                        shift and go to state 3
+    Valores                        shift and go to state 4
+    Operadores                     shift and go to state 5
+    Declaracao                     shift and go to state 6
+    Print                          shift and go to state 7
+    Operacao                       shift and go to state 8
+    Condicional                    shift and go to state 9
+    Ciclo                          shift and go to state 10
+    DeclaracaoF                    shift and go to state 23
+    DeclaracaoV                    shift and go to state 24
+
+state 40
+
+    (33) DeclaracaoV -> VARIABLE .
+
+    DEFINED_WORD    reduce using rule 33 (DeclaracaoV -> VARIABLE .)
+    INT             reduce using rule 33 (DeclaracaoV -> VARIABLE .)
+    PLUS            reduce using rule 33 (DeclaracaoV -> VARIABLE .)
+    MINUS           reduce using rule 33 (DeclaracaoV -> VARIABLE .)
+    TIMES           reduce using rule 33 (DeclaracaoV -> VARIABLE .)
+    DIVIDE          reduce using rule 33 (DeclaracaoV -> VARIABLE .)
+    MOD             reduce using rule 33 (DeclaracaoV -> VARIABLE .)
+    SUPEQ           reduce using rule 33 (DeclaracaoV -> VARIABLE .)
+    INFEQ           reduce using rule 33 (DeclaracaoV -> VARIABLE .)
+    INFERIOR        reduce using rule 33 (DeclaracaoV -> VARIABLE .)
+    SUPERIOR        reduce using rule 33 (DeclaracaoV -> VARIABLE .)
+    EQUALS          reduce using rule 33 (DeclaracaoV -> VARIABLE .)
+    STRING          reduce using rule 33 (DeclaracaoV -> VARIABLE .)
+    EMIT            reduce using rule 33 (DeclaracaoV -> VARIABLE .)
+    DOT             reduce using rule 33 (DeclaracaoV -> VARIABLE .)
+    CHAR            reduce using rule 33 (DeclaracaoV -> VARIABLE .)
+    SPACE           reduce using rule 33 (DeclaracaoV -> VARIABLE .)
+    SPACES          reduce using rule 33 (DeclaracaoV -> VARIABLE .)
+    CR              reduce using rule 33 (DeclaracaoV -> VARIABLE .)
+    KEY             reduce using rule 33 (DeclaracaoV -> VARIABLE .)
+    DUP             reduce using rule 33 (DeclaracaoV -> VARIABLE .)
+    2DUP            reduce using rule 33 (DeclaracaoV -> VARIABLE .)
+    SWAP            reduce using rule 33 (DeclaracaoV -> VARIABLE .)
+    DROP            reduce using rule 33 (DeclaracaoV -> VARIABLE .)
+    IF              reduce using rule 33 (DeclaracaoV -> VARIABLE .)
+    DO              reduce using rule 33 (DeclaracaoV -> VARIABLE .)
+    NAME            reduce using rule 33 (DeclaracaoV -> VARIABLE .)
+    VARIABLE        reduce using rule 33 (DeclaracaoV -> VARIABLE .)
+    EXCLAMATION     reduce using rule 33 (DeclaracaoV -> VARIABLE .)
+    AT              reduce using rule 33 (DeclaracaoV -> VARIABLE .)
+    $end            reduce using rule 33 (DeclaracaoV -> VARIABLE .)
+    ELSE            reduce using rule 33 (DeclaracaoV -> VARIABLE .)
+    THEN            reduce using rule 33 (DeclaracaoV -> VARIABLE .)
+    LOOP            reduce using rule 33 (DeclaracaoV -> VARIABLE .)
+    SEMICOLON       reduce using rule 33 (DeclaracaoV -> VARIABLE .)
+
+
+state 41
+
+    (34) DeclaracaoV -> EXCLAMATION .
+
+    DEFINED_WORD    reduce using rule 34 (DeclaracaoV -> EXCLAMATION .)
+    INT             reduce using rule 34 (DeclaracaoV -> EXCLAMATION .)
+    PLUS            reduce using rule 34 (DeclaracaoV -> EXCLAMATION .)
+    MINUS           reduce using rule 34 (DeclaracaoV -> EXCLAMATION .)
+    TIMES           reduce using rule 34 (DeclaracaoV -> EXCLAMATION .)
+    DIVIDE          reduce using rule 34 (DeclaracaoV -> EXCLAMATION .)
+    MOD             reduce using rule 34 (DeclaracaoV -> EXCLAMATION .)
+    SUPEQ           reduce using rule 34 (DeclaracaoV -> EXCLAMATION .)
+    INFEQ           reduce using rule 34 (DeclaracaoV -> EXCLAMATION .)
+    INFERIOR        reduce using rule 34 (DeclaracaoV -> EXCLAMATION .)
+    SUPERIOR        reduce using rule 34 (DeclaracaoV -> EXCLAMATION .)
+    EQUALS          reduce using rule 34 (DeclaracaoV -> EXCLAMATION .)
+    STRING          reduce using rule 34 (DeclaracaoV -> EXCLAMATION .)
+    EMIT            reduce using rule 34 (DeclaracaoV -> EXCLAMATION .)
+    DOT             reduce using rule 34 (DeclaracaoV -> EXCLAMATION .)
+    CHAR            reduce using rule 34 (DeclaracaoV -> EXCLAMATION .)
+    SPACE           reduce using rule 34 (DeclaracaoV -> EXCLAMATION .)
+    SPACES          reduce using rule 34 (DeclaracaoV -> EXCLAMATION .)
+    CR              reduce using rule 34 (DeclaracaoV -> EXCLAMATION .)
+    KEY             reduce using rule 34 (DeclaracaoV -> EXCLAMATION .)
+    DUP             reduce using rule 34 (DeclaracaoV -> EXCLAMATION .)
+    2DUP            reduce using rule 34 (DeclaracaoV -> EXCLAMATION .)
+    SWAP            reduce using rule 34 (DeclaracaoV -> EXCLAMATION .)
+    DROP            reduce using rule 34 (DeclaracaoV -> EXCLAMATION .)
+    IF              reduce using rule 34 (DeclaracaoV -> EXCLAMATION .)
+    DO              reduce using rule 34 (DeclaracaoV -> EXCLAMATION .)
+    NAME            reduce using rule 34 (DeclaracaoV -> EXCLAMATION .)
+    VARIABLE        reduce using rule 34 (DeclaracaoV -> EXCLAMATION .)
+    EXCLAMATION     reduce using rule 34 (DeclaracaoV -> EXCLAMATION .)
+    AT              reduce using rule 34 (DeclaracaoV -> EXCLAMATION .)
+    $end            reduce using rule 34 (DeclaracaoV -> EXCLAMATION .)
+    ELSE            reduce using rule 34 (DeclaracaoV -> EXCLAMATION .)
+    THEN            reduce using rule 34 (DeclaracaoV -> EXCLAMATION .)
+    LOOP            reduce using rule 34 (DeclaracaoV -> EXCLAMATION .)
+    SEMICOLON       reduce using rule 34 (DeclaracaoV -> EXCLAMATION .)
+
+
+state 42
+
+    (35) DeclaracaoV -> AT .
+
+    DEFINED_WORD    reduce using rule 35 (DeclaracaoV -> AT .)
+    INT             reduce using rule 35 (DeclaracaoV -> AT .)
+    PLUS            reduce using rule 35 (DeclaracaoV -> AT .)
+    MINUS           reduce using rule 35 (DeclaracaoV -> AT .)
+    TIMES           reduce using rule 35 (DeclaracaoV -> AT .)
+    DIVIDE          reduce using rule 35 (DeclaracaoV -> AT .)
+    MOD             reduce using rule 35 (DeclaracaoV -> AT .)
+    SUPEQ           reduce using rule 35 (DeclaracaoV -> AT .)
+    INFEQ           reduce using rule 35 (DeclaracaoV -> AT .)
+    INFERIOR        reduce using rule 35 (DeclaracaoV -> AT .)
+    SUPERIOR        reduce using rule 35 (DeclaracaoV -> AT .)
+    EQUALS          reduce using rule 35 (DeclaracaoV -> AT .)
+    STRING          reduce using rule 35 (DeclaracaoV -> AT .)
+    EMIT            reduce using rule 35 (DeclaracaoV -> AT .)
+    DOT             reduce using rule 35 (DeclaracaoV -> AT .)
+    CHAR            reduce using rule 35 (DeclaracaoV -> AT .)
+    SPACE           reduce using rule 35 (DeclaracaoV -> AT .)
+    SPACES          reduce using rule 35 (DeclaracaoV -> AT .)
+    CR              reduce using rule 35 (DeclaracaoV -> AT .)
+    KEY             reduce using rule 35 (DeclaracaoV -> AT .)
+    DUP             reduce using rule 35 (DeclaracaoV -> AT .)
+    2DUP            reduce using rule 35 (DeclaracaoV -> AT .)
+    SWAP            reduce using rule 35 (DeclaracaoV -> AT .)
+    DROP            reduce using rule 35 (DeclaracaoV -> AT .)
+    IF              reduce using rule 35 (DeclaracaoV -> AT .)
+    DO              reduce using rule 35 (DeclaracaoV -> AT .)
+    NAME            reduce using rule 35 (DeclaracaoV -> AT .)
+    VARIABLE        reduce using rule 35 (DeclaracaoV -> AT .)
+    EXCLAMATION     reduce using rule 35 (DeclaracaoV -> AT .)
+    AT              reduce using rule 35 (DeclaracaoV -> AT .)
+    $end            reduce using rule 35 (DeclaracaoV -> AT .)
+    ELSE            reduce using rule 35 (DeclaracaoV -> AT .)
+    THEN            reduce using rule 35 (DeclaracaoV -> AT .)
+    LOOP            reduce using rule 35 (DeclaracaoV -> AT .)
+    SEMICOLON       reduce using rule 35 (DeclaracaoV -> AT .)
+
+
+state 43
+
+    (2) Comandos -> Comando Comandos .
+
+    $end            reduce using rule 2 (Comandos -> Comando Comandos .)
+    ELSE            reduce using rule 2 (Comandos -> Comando Comandos .)
+    THEN            reduce using rule 2 (Comandos -> Comando Comandos .)
+    LOOP            reduce using rule 2 (Comandos -> Comando Comandos .)
+    SEMICOLON       reduce using rule 2 (Comandos -> Comando Comandos .)
+
+
+state 44
+
+    (12) Condicional -> IF Comandos . ELSE Comandos THEN
+    (13) Condicional -> IF Comandos . ELSE THEN
+    (14) Condicional -> IF Comandos . THEN
+
+    ELSE            shift and go to state 48
+    THEN            shift and go to state 49
+
+
+state 45
+
+    (15) Condicional -> IF THEN .
+
+    DEFINED_WORD    reduce using rule 15 (Condicional -> IF THEN .)
+    INT             reduce using rule 15 (Condicional -> IF THEN .)
+    PLUS            reduce using rule 15 (Condicional -> IF THEN .)
+    MINUS           reduce using rule 15 (Condicional -> IF THEN .)
+    TIMES           reduce using rule 15 (Condicional -> IF THEN .)
+    DIVIDE          reduce using rule 15 (Condicional -> IF THEN .)
+    MOD             reduce using rule 15 (Condicional -> IF THEN .)
+    SUPEQ           reduce using rule 15 (Condicional -> IF THEN .)
+    INFEQ           reduce using rule 15 (Condicional -> IF THEN .)
+    INFERIOR        reduce using rule 15 (Condicional -> IF THEN .)
+    SUPERIOR        reduce using rule 15 (Condicional -> IF THEN .)
+    EQUALS          reduce using rule 15 (Condicional -> IF THEN .)
+    STRING          reduce using rule 15 (Condicional -> IF THEN .)
+    EMIT            reduce using rule 15 (Condicional -> IF THEN .)
+    DOT             reduce using rule 15 (Condicional -> IF THEN .)
+    CHAR            reduce using rule 15 (Condicional -> IF THEN .)
+    SPACE           reduce using rule 15 (Condicional -> IF THEN .)
+    SPACES          reduce using rule 15 (Condicional -> IF THEN .)
+    CR              reduce using rule 15 (Condicional -> IF THEN .)
+    KEY             reduce using rule 15 (Condicional -> IF THEN .)
+    DUP             reduce using rule 15 (Condicional -> IF THEN .)
+    2DUP            reduce using rule 15 (Condicional -> IF THEN .)
+    SWAP            reduce using rule 15 (Condicional -> IF THEN .)
+    DROP            reduce using rule 15 (Condicional -> IF THEN .)
+    IF              reduce using rule 15 (Condicional -> IF THEN .)
+    DO              reduce using rule 15 (Condicional -> IF THEN .)
+    NAME            reduce using rule 15 (Condicional -> IF THEN .)
+    VARIABLE        reduce using rule 15 (Condicional -> IF THEN .)
+    EXCLAMATION     reduce using rule 15 (Condicional -> IF THEN .)
+    AT              reduce using rule 15 (Condicional -> IF THEN .)
+    $end            reduce using rule 15 (Condicional -> IF THEN .)
+    ELSE            reduce using rule 15 (Condicional -> IF THEN .)
+    THEN            reduce using rule 15 (Condicional -> IF THEN .)
+    LOOP            reduce using rule 15 (Condicional -> IF THEN .)
+    SEMICOLON       reduce using rule 15 (Condicional -> IF THEN .)
+
+
+state 46
+
+    (16) Ciclo -> DO Comandos . LOOP
+
+    LOOP            shift and go to state 50
+
+
+state 47
+
+    (32) DeclaracaoF -> NAME Comandos . SEMICOLON
+
+    SEMICOLON       shift and go to state 51
+
+
+state 48
+
+    (12) Condicional -> IF Comandos ELSE . Comandos THEN
+    (13) Condicional -> IF Comandos ELSE . THEN
+    (2) Comandos -> . Comando Comandos
+    (3) Comandos -> . Comando
+    (4) Comando -> . Valores
+    (5) Comando -> . Operadores
+    (6) Comando -> . Declaracao
+    (7) Comando -> . Print
+    (8) Comando -> . Operacao
+    (9) Comando -> . Condicional
+    (10) Comando -> . Ciclo
+    (11) Comando -> . DEFINED_WORD
+    (29) Valores -> . INT
+    (36) Operadores -> . PLUS
+    (37) Operadores -> . MINUS
+    (38) Operadores -> . TIMES
+    (39) Operadores -> . DIVIDE
+    (40) Operadores -> . MOD
+    (41) Operadores -> . SUPEQ
+    (42) Operadores -> . INFEQ
+    (43) Operadores -> . INFERIOR
+    (44) Operadores -> . SUPERIOR
+    (45) Operadores -> . EQUALS
+    (30) Declaracao -> . DeclaracaoF
+    (31) Declaracao -> . DeclaracaoV
+    (22) Print -> . STRING
+    (23) Print -> . EMIT
+    (24) Print -> . DOT
+    (25) Print -> . CHAR
+    (26) Print -> . SPACE
+    (27) Print -> . SPACES
+    (28) Print -> . CR
+    (17) Operacao -> . KEY
+    (18) Operacao -> . DUP
+    (19) Operacao -> . 2DUP
+    (20) Operacao -> . SWAP
+    (21) Operacao -> . DROP
+    (12) Condicional -> . IF Comandos ELSE Comandos THEN
+    (13) Condicional -> . IF Comandos ELSE THEN
+    (14) Condicional -> . IF Comandos THEN
+    (15) Condicional -> . IF THEN
+    (16) Ciclo -> . DO Comandos LOOP
+    (32) DeclaracaoF -> . NAME Comandos SEMICOLON
+    (33) DeclaracaoV -> . VARIABLE
+    (34) DeclaracaoV -> . EXCLAMATION
+    (35) DeclaracaoV -> . AT
+
+    THEN            shift and go to state 53
+    DEFINED_WORD    shift and go to state 11
+    INT             shift and go to state 12
+    PLUS            shift and go to state 13
+    MINUS           shift and go to state 14
+    TIMES           shift and go to state 15
+    DIVIDE          shift and go to state 16
+    MOD             shift and go to state 17
+    SUPEQ           shift and go to state 18
+    INFEQ           shift and go to state 19
+    INFERIOR        shift and go to state 20
+    SUPERIOR        shift and go to state 21
+    EQUALS          shift and go to state 22
+    STRING          shift and go to state 25
+    EMIT            shift and go to state 26
+    DOT             shift and go to state 27
+    CHAR            shift and go to state 28
+    SPACE           shift and go to state 29
+    SPACES          shift and go to state 30
+    CR              shift and go to state 31
+    KEY             shift and go to state 32
+    DUP             shift and go to state 33
+    2DUP            shift and go to state 34
+    SWAP            shift and go to state 35
+    DROP            shift and go to state 36
+    IF              shift and go to state 37
+    DO              shift and go to state 38
+    NAME            shift and go to state 39
+    VARIABLE        shift and go to state 40
+    EXCLAMATION     shift and go to state 41
+    AT              shift and go to state 42
+
+    Comandos                       shift and go to state 52
+    Comando                        shift and go to state 3
+    Valores                        shift and go to state 4
+    Operadores                     shift and go to state 5
+    Declaracao                     shift and go to state 6
+    Print                          shift and go to state 7
+    Operacao                       shift and go to state 8
+    Condicional                    shift and go to state 9
+    Ciclo                          shift and go to state 10
+    DeclaracaoF                    shift and go to state 23
+    DeclaracaoV                    shift and go to state 24
+
+state 49
+
+    (14) Condicional -> IF Comandos THEN .
+
+    DEFINED_WORD    reduce using rule 14 (Condicional -> IF Comandos THEN .)
+    INT             reduce using rule 14 (Condicional -> IF Comandos THEN .)
+    PLUS            reduce using rule 14 (Condicional -> IF Comandos THEN .)
+    MINUS           reduce using rule 14 (Condicional -> IF Comandos THEN .)
+    TIMES           reduce using rule 14 (Condicional -> IF Comandos THEN .)
+    DIVIDE          reduce using rule 14 (Condicional -> IF Comandos THEN .)
+    MOD             reduce using rule 14 (Condicional -> IF Comandos THEN .)
+    SUPEQ           reduce using rule 14 (Condicional -> IF Comandos THEN .)
+    INFEQ           reduce using rule 14 (Condicional -> IF Comandos THEN .)
+    INFERIOR        reduce using rule 14 (Condicional -> IF Comandos THEN .)
+    SUPERIOR        reduce using rule 14 (Condicional -> IF Comandos THEN .)
+    EQUALS          reduce using rule 14 (Condicional -> IF Comandos THEN .)
+    STRING          reduce using rule 14 (Condicional -> IF Comandos THEN .)
+    EMIT            reduce using rule 14 (Condicional -> IF Comandos THEN .)
+    DOT             reduce using rule 14 (Condicional -> IF Comandos THEN .)
+    CHAR            reduce using rule 14 (Condicional -> IF Comandos THEN .)
+    SPACE           reduce using rule 14 (Condicional -> IF Comandos THEN .)
+    SPACES          reduce using rule 14 (Condicional -> IF Comandos THEN .)
+    CR              reduce using rule 14 (Condicional -> IF Comandos THEN .)
+    KEY             reduce using rule 14 (Condicional -> IF Comandos THEN .)
+    DUP             reduce using rule 14 (Condicional -> IF Comandos THEN .)
+    2DUP            reduce using rule 14 (Condicional -> IF Comandos THEN .)
+    SWAP            reduce using rule 14 (Condicional -> IF Comandos THEN .)
+    DROP            reduce using rule 14 (Condicional -> IF Comandos THEN .)
+    IF              reduce using rule 14 (Condicional -> IF Comandos THEN .)
+    DO              reduce using rule 14 (Condicional -> IF Comandos THEN .)
+    NAME            reduce using rule 14 (Condicional -> IF Comandos THEN .)
+    VARIABLE        reduce using rule 14 (Condicional -> IF Comandos THEN .)
+    EXCLAMATION     reduce using rule 14 (Condicional -> IF Comandos THEN .)
+    AT              reduce using rule 14 (Condicional -> IF Comandos THEN .)
+    $end            reduce using rule 14 (Condicional -> IF Comandos THEN .)
+    ELSE            reduce using rule 14 (Condicional -> IF Comandos THEN .)
+    THEN            reduce using rule 14 (Condicional -> IF Comandos THEN .)
+    LOOP            reduce using rule 14 (Condicional -> IF Comandos THEN .)
+    SEMICOLON       reduce using rule 14 (Condicional -> IF Comandos THEN .)
+
+
+state 50
+
+    (16) Ciclo -> DO Comandos LOOP .
+
+    DEFINED_WORD    reduce using rule 16 (Ciclo -> DO Comandos LOOP .)
+    INT             reduce using rule 16 (Ciclo -> DO Comandos LOOP .)
+    PLUS            reduce using rule 16 (Ciclo -> DO Comandos LOOP .)
+    MINUS           reduce using rule 16 (Ciclo -> DO Comandos LOOP .)
+    TIMES           reduce using rule 16 (Ciclo -> DO Comandos LOOP .)
+    DIVIDE          reduce using rule 16 (Ciclo -> DO Comandos LOOP .)
+    MOD             reduce using rule 16 (Ciclo -> DO Comandos LOOP .)
+    SUPEQ           reduce using rule 16 (Ciclo -> DO Comandos LOOP .)
+    INFEQ           reduce using rule 16 (Ciclo -> DO Comandos LOOP .)
+    INFERIOR        reduce using rule 16 (Ciclo -> DO Comandos LOOP .)
+    SUPERIOR        reduce using rule 16 (Ciclo -> DO Comandos LOOP .)
+    EQUALS          reduce using rule 16 (Ciclo -> DO Comandos LOOP .)
+    STRING          reduce using rule 16 (Ciclo -> DO Comandos LOOP .)
+    EMIT            reduce using rule 16 (Ciclo -> DO Comandos LOOP .)
+    DOT             reduce using rule 16 (Ciclo -> DO Comandos LOOP .)
+    CHAR            reduce using rule 16 (Ciclo -> DO Comandos LOOP .)
+    SPACE           reduce using rule 16 (Ciclo -> DO Comandos LOOP .)
+    SPACES          reduce using rule 16 (Ciclo -> DO Comandos LOOP .)
+    CR              reduce using rule 16 (Ciclo -> DO Comandos LOOP .)
+    KEY             reduce using rule 16 (Ciclo -> DO Comandos LOOP .)
+    DUP             reduce using rule 16 (Ciclo -> DO Comandos LOOP .)
+    2DUP            reduce using rule 16 (Ciclo -> DO Comandos LOOP .)
+    SWAP            reduce using rule 16 (Ciclo -> DO Comandos LOOP .)
+    DROP            reduce using rule 16 (Ciclo -> DO Comandos LOOP .)
+    IF              reduce using rule 16 (Ciclo -> DO Comandos LOOP .)
+    DO              reduce using rule 16 (Ciclo -> DO Comandos LOOP .)
+    NAME            reduce using rule 16 (Ciclo -> DO Comandos LOOP .)
+    VARIABLE        reduce using rule 16 (Ciclo -> DO Comandos LOOP .)
+    EXCLAMATION     reduce using rule 16 (Ciclo -> DO Comandos LOOP .)
+    AT              reduce using rule 16 (Ciclo -> DO Comandos LOOP .)
+    $end            reduce using rule 16 (Ciclo -> DO Comandos LOOP .)
+    ELSE            reduce using rule 16 (Ciclo -> DO Comandos LOOP .)
+    THEN            reduce using rule 16 (Ciclo -> DO Comandos LOOP .)
+    LOOP            reduce using rule 16 (Ciclo -> DO Comandos LOOP .)
+    SEMICOLON       reduce using rule 16 (Ciclo -> DO Comandos LOOP .)
+
+
+state 51
+
+    (32) DeclaracaoF -> NAME Comandos SEMICOLON .
+
+    DEFINED_WORD    reduce using rule 32 (DeclaracaoF -> NAME Comandos SEMICOLON .)
+    INT             reduce using rule 32 (DeclaracaoF -> NAME Comandos SEMICOLON .)
+    PLUS            reduce using rule 32 (DeclaracaoF -> NAME Comandos SEMICOLON .)
+    MINUS           reduce using rule 32 (DeclaracaoF -> NAME Comandos SEMICOLON .)
+    TIMES           reduce using rule 32 (DeclaracaoF -> NAME Comandos SEMICOLON .)
+    DIVIDE          reduce using rule 32 (DeclaracaoF -> NAME Comandos SEMICOLON .)
+    MOD             reduce using rule 32 (DeclaracaoF -> NAME Comandos SEMICOLON .)
+    SUPEQ           reduce using rule 32 (DeclaracaoF -> NAME Comandos SEMICOLON .)
+    INFEQ           reduce using rule 32 (DeclaracaoF -> NAME Comandos SEMICOLON .)
+    INFERIOR        reduce using rule 32 (DeclaracaoF -> NAME Comandos SEMICOLON .)
+    SUPERIOR        reduce using rule 32 (DeclaracaoF -> NAME Comandos SEMICOLON .)
+    EQUALS          reduce using rule 32 (DeclaracaoF -> NAME Comandos SEMICOLON .)
+    STRING          reduce using rule 32 (DeclaracaoF -> NAME Comandos SEMICOLON .)
+    EMIT            reduce using rule 32 (DeclaracaoF -> NAME Comandos SEMICOLON .)
+    DOT             reduce using rule 32 (DeclaracaoF -> NAME Comandos SEMICOLON .)
+    CHAR            reduce using rule 32 (DeclaracaoF -> NAME Comandos SEMICOLON .)
+    SPACE           reduce using rule 32 (DeclaracaoF -> NAME Comandos SEMICOLON .)
+    SPACES          reduce using rule 32 (DeclaracaoF -> NAME Comandos SEMICOLON .)
+    CR              reduce using rule 32 (DeclaracaoF -> NAME Comandos SEMICOLON .)
+    KEY             reduce using rule 32 (DeclaracaoF -> NAME Comandos SEMICOLON .)
+    DUP             reduce using rule 32 (DeclaracaoF -> NAME Comandos SEMICOLON .)
+    2DUP            reduce using rule 32 (DeclaracaoF -> NAME Comandos SEMICOLON .)
+    SWAP            reduce using rule 32 (DeclaracaoF -> NAME Comandos SEMICOLON .)
+    DROP            reduce using rule 32 (DeclaracaoF -> NAME Comandos SEMICOLON .)
+    IF              reduce using rule 32 (DeclaracaoF -> NAME Comandos SEMICOLON .)
+    DO              reduce using rule 32 (DeclaracaoF -> NAME Comandos SEMICOLON .)
+    NAME            reduce using rule 32 (DeclaracaoF -> NAME Comandos SEMICOLON .)
+    VARIABLE        reduce using rule 32 (DeclaracaoF -> NAME Comandos SEMICOLON .)
+    EXCLAMATION     reduce using rule 32 (DeclaracaoF -> NAME Comandos SEMICOLON .)
+    AT              reduce using rule 32 (DeclaracaoF -> NAME Comandos SEMICOLON .)
+    $end            reduce using rule 32 (DeclaracaoF -> NAME Comandos SEMICOLON .)
+    ELSE            reduce using rule 32 (DeclaracaoF -> NAME Comandos SEMICOLON .)
+    THEN            reduce using rule 32 (DeclaracaoF -> NAME Comandos SEMICOLON .)
+    LOOP            reduce using rule 32 (DeclaracaoF -> NAME Comandos SEMICOLON .)
+    SEMICOLON       reduce using rule 32 (DeclaracaoF -> NAME Comandos SEMICOLON .)
+
+
+state 52
+
+    (12) Condicional -> IF Comandos ELSE Comandos . THEN
+
+    THEN            shift and go to state 54
+
+
+state 53
+
+    (13) Condicional -> IF Comandos ELSE THEN .
+
+    DEFINED_WORD    reduce using rule 13 (Condicional -> IF Comandos ELSE THEN .)
+    INT             reduce using rule 13 (Condicional -> IF Comandos ELSE THEN .)
+    PLUS            reduce using rule 13 (Condicional -> IF Comandos ELSE THEN .)
+    MINUS           reduce using rule 13 (Condicional -> IF Comandos ELSE THEN .)
+    TIMES           reduce using rule 13 (Condicional -> IF Comandos ELSE THEN .)
+    DIVIDE          reduce using rule 13 (Condicional -> IF Comandos ELSE THEN .)
+    MOD             reduce using rule 13 (Condicional -> IF Comandos ELSE THEN .)
+    SUPEQ           reduce using rule 13 (Condicional -> IF Comandos ELSE THEN .)
+    INFEQ           reduce using rule 13 (Condicional -> IF Comandos ELSE THEN .)
+    INFERIOR        reduce using rule 13 (Condicional -> IF Comandos ELSE THEN .)
+    SUPERIOR        reduce using rule 13 (Condicional -> IF Comandos ELSE THEN .)
+    EQUALS          reduce using rule 13 (Condicional -> IF Comandos ELSE THEN .)
+    STRING          reduce using rule 13 (Condicional -> IF Comandos ELSE THEN .)
+    EMIT            reduce using rule 13 (Condicional -> IF Comandos ELSE THEN .)
+    DOT             reduce using rule 13 (Condicional -> IF Comandos ELSE THEN .)
+    CHAR            reduce using rule 13 (Condicional -> IF Comandos ELSE THEN .)
+    SPACE           reduce using rule 13 (Condicional -> IF Comandos ELSE THEN .)
+    SPACES          reduce using rule 13 (Condicional -> IF Comandos ELSE THEN .)
+    CR              reduce using rule 13 (Condicional -> IF Comandos ELSE THEN .)
+    KEY             reduce using rule 13 (Condicional -> IF Comandos ELSE THEN .)
+    DUP             reduce using rule 13 (Condicional -> IF Comandos ELSE THEN .)
+    2DUP            reduce using rule 13 (Condicional -> IF Comandos ELSE THEN .)
+    SWAP            reduce using rule 13 (Condicional -> IF Comandos ELSE THEN .)
+    DROP            reduce using rule 13 (Condicional -> IF Comandos ELSE THEN .)
+    IF              reduce using rule 13 (Condicional -> IF Comandos ELSE THEN .)
+    DO              reduce using rule 13 (Condicional -> IF Comandos ELSE THEN .)
+    NAME            reduce using rule 13 (Condicional -> IF Comandos ELSE THEN .)
+    VARIABLE        reduce using rule 13 (Condicional -> IF Comandos ELSE THEN .)
+    EXCLAMATION     reduce using rule 13 (Condicional -> IF Comandos ELSE THEN .)
+    AT              reduce using rule 13 (Condicional -> IF Comandos ELSE THEN .)
+    $end            reduce using rule 13 (Condicional -> IF Comandos ELSE THEN .)
+    ELSE            reduce using rule 13 (Condicional -> IF Comandos ELSE THEN .)
+    THEN            reduce using rule 13 (Condicional -> IF Comandos ELSE THEN .)
+    LOOP            reduce using rule 13 (Condicional -> IF Comandos ELSE THEN .)
+    SEMICOLON       reduce using rule 13 (Condicional -> IF Comandos ELSE THEN .)
+
+
+state 54
+
+    (12) Condicional -> IF Comandos ELSE Comandos THEN .
+
+    DEFINED_WORD    reduce using rule 12 (Condicional -> IF Comandos ELSE Comandos THEN .)
+    INT             reduce using rule 12 (Condicional -> IF Comandos ELSE Comandos THEN .)
+    PLUS            reduce using rule 12 (Condicional -> IF Comandos ELSE Comandos THEN .)
+    MINUS           reduce using rule 12 (Condicional -> IF Comandos ELSE Comandos THEN .)
+    TIMES           reduce using rule 12 (Condicional -> IF Comandos ELSE Comandos THEN .)
+    DIVIDE          reduce using rule 12 (Condicional -> IF Comandos ELSE Comandos THEN .)
+    MOD             reduce using rule 12 (Condicional -> IF Comandos ELSE Comandos THEN .)
+    SUPEQ           reduce using rule 12 (Condicional -> IF Comandos ELSE Comandos THEN .)
+    INFEQ           reduce using rule 12 (Condicional -> IF Comandos ELSE Comandos THEN .)
+    INFERIOR        reduce using rule 12 (Condicional -> IF Comandos ELSE Comandos THEN .)
+    SUPERIOR        reduce using rule 12 (Condicional -> IF Comandos ELSE Comandos THEN .)
+    EQUALS          reduce using rule 12 (Condicional -> IF Comandos ELSE Comandos THEN .)
+    STRING          reduce using rule 12 (Condicional -> IF Comandos ELSE Comandos THEN .)
+    EMIT            reduce using rule 12 (Condicional -> IF Comandos ELSE Comandos THEN .)
+    DOT             reduce using rule 12 (Condicional -> IF Comandos ELSE Comandos THEN .)
+    CHAR            reduce using rule 12 (Condicional -> IF Comandos ELSE Comandos THEN .)
+    SPACE           reduce using rule 12 (Condicional -> IF Comandos ELSE Comandos THEN .)
+    SPACES          reduce using rule 12 (Condicional -> IF Comandos ELSE Comandos THEN .)
+    CR              reduce using rule 12 (Condicional -> IF Comandos ELSE Comandos THEN .)
+    KEY             reduce using rule 12 (Condicional -> IF Comandos ELSE Comandos THEN .)
+    DUP             reduce using rule 12 (Condicional -> IF Comandos ELSE Comandos THEN .)
+    2DUP            reduce using rule 12 (Condicional -> IF Comandos ELSE Comandos THEN .)
+    SWAP            reduce using rule 12 (Condicional -> IF Comandos ELSE Comandos THEN .)
+    DROP            reduce using rule 12 (Condicional -> IF Comandos ELSE Comandos THEN .)
+    IF              reduce using rule 12 (Condicional -> IF Comandos ELSE Comandos THEN .)
+    DO              reduce using rule 12 (Condicional -> IF Comandos ELSE Comandos THEN .)
+    NAME            reduce using rule 12 (Condicional -> IF Comandos ELSE Comandos THEN .)
+    VARIABLE        reduce using rule 12 (Condicional -> IF Comandos ELSE Comandos THEN .)
+    EXCLAMATION     reduce using rule 12 (Condicional -> IF Comandos ELSE Comandos THEN .)
+    AT              reduce using rule 12 (Condicional -> IF Comandos ELSE Comandos THEN .)
+    $end            reduce using rule 12 (Condicional -> IF Comandos ELSE Comandos THEN .)
+    ELSE            reduce using rule 12 (Condicional -> IF Comandos ELSE Comandos THEN .)
+    THEN            reduce using rule 12 (Condicional -> IF Comandos ELSE Comandos THEN .)
+    LOOP            reduce using rule 12 (Condicional -> IF Comandos ELSE Comandos THEN .)
+    SEMICOLON       reduce using rule 12 (Condicional -> IF Comandos ELSE Comandos THEN .)
+

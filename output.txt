@@ -1,0 +1,16 @@
+pushi 0
+pushi 0
+start
+alloc 1
+storeg 1
+
+pushi 10
+pushg 1
+swap
+store 0
+pushg 1
+load 0
+writei
+
+stop
+
